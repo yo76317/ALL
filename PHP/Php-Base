@@ -1,0 +1,18 @@
+編譯""內的變數，''視為純字串輸出
+
+for ( 初始值 ; 比對運算式 ; 初始值+步進值  )
+while( 條件 )
+　... while 迴圈內要執行的程式碼 ...
+pre 順序標籤  echo "<pre>";  print_r($nums);  echo "</pre>";
+EXPLODE 炸開 IMPLODE 恢復
+! 否定   %除   ||或   ==等於  !=不等於
+in_array 比對值，有才回傳true 反之false 
+<div>可換行</div>
+array 當成可以存很多值的變數
+
+和&& ||或~
+
+border(邊框), margin(邊界), padding(邊距)
+margin:auto 置中
+
+break是為迴圈中的指令，在迴圈執行的過程中，如果遇到break會跳出迴圈。

@@ -1,0 +1,102 @@
+*{box-sizing: border-box;
+font-family: '標楷體';
+overflow:hidden;
+}
+
+.main{color:blue;
+width:1024px;
+padding:0px 12px;
+margin:10px auto;
+text-align:center;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+
+/* 
+    body 內 除了aside section 都要上border
+    aside 內 上border (menu update)
+    section 內 上border (marquee content)
+*/
+body>*:not(aside,section),aside>*,section>*{
+    border:3px solid lightgray;}
+
+    /* TOP */
+.top{flex-basis: 1000px;
+    height: 65px;
+}
+.top>a{display:block;}
+
+
+
+/* aside */
+.aside{
+flex-basis:215px;
+    /* 定義較高 width:215 */
+height:calc(768px - 65px - 20px);
+display:flex;
+flex-direction: column;
+}
+
+.menu{flex-basis:calc(100% - 25px);
+}
+
+.aside-menu{font-size:24px;
+    align-content:center;
+    text-decoration:underline;
+    color:#ff00ff;
+    font-weight:500;
+    font-family: '標楷體';
+    padding:10px;
+    height:50px;
+    /* margin-bottom:20px; */
+}
+.aside>nav>a{
+    color:#000000;
+    background:url('/image/menu1.png');
+    display:inline-block;
+    width:200px;
+    height:35px;
+    line-height:35px;
+    font-size:16px;
+}
+.aside>nav>a:hover{background:url('/image/menu2.png');
+}
+
+.update{flex-basis:25px;
+    font-family: '標楷體';
+    color: #000000;
+    text-align: center;
+}
+
+.section{
+    flex-basis:calc(1000px - 215px);  
+    /* 次軸長度 */
+    display:flex;
+    flex-flow:column nowrap;
+}
+
+.marquee-1{flex-basis:29px;
+    padding:0 calc((100% - 770px - 2px)/2);
+}
+.marquee-2{height:29px;
+    width:770px;
+    font-size:24px;
+    color:#0000ff;
+    font-family: '標楷體';  
+}
+
+.content{
+flex-basis:calc(100% - 29px);
+padding:calc((100% - 770px - 2px) /2);
+}
+
+.footer{
+    flex-basis:1000px;
+    height:20px;
+    font-family: '標楷體';
+    color:#000000;
+    text-align:center;
+    font-size:16px;
+}

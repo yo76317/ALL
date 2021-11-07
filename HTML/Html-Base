@@ -1,0 +1,108 @@
+<b>粗體 <i>斜體 <em>斜體權重 <strong>權重 <mark> - 標記文本
+<small>較小字 <del>刪除線 <ins>插入文本(下底線) <sup>上標文字 <sub>下標文字
+<span>不換行段落 <&nbsp>空白鍵空格 <&emsp>全形空格中文字寬
+
+aside側邊欄位
+article獨立的、自包含的內容
+section一段專題內容，一般會有標題。歸類在同一個區塊的話，用<article>來包覆多個<section>
+div樣式化或方便腳本使用，用div
+
+header首頁  nav導覽列  main主內容 section標題區域(有主題) active(獨立性)
+aside側邊欄  footer頁尾  
+
+<ifram>
+超聯結
+_blank新窗口 _parent父框架 _top整個窗口
+<a href="網址"></a>  
+<a href="網址" target="_blank"></a>
+<a href="網址"><img src="圖檔" alt="替代文字"></a>
+<a href="網址" title="文字"></a>
+
+
+錨點
+指定id=""    錨點a href="#"  空錨點預設頂部   指定框架打開:name=""   target=""
+
+加圖片
+<img src="檔案位置" alt="替代文字">
+<img src="mumu01.jpg" alt="圖片檔遺失" width="200" height="200">
+
+
+
+title :<p title="I'm lorem">lorem</p>  滑鼠停留在內文時會出現註解
+
+width寬 height高 border表格邊框 background背景 rowspan合併行 colspan合併列 
+table>tr*3>td*3
+nth-child(odd)單數or(even)雙數
+<ol type=""> A大寫英 a I羅馬數字 i
+
+colspan 直
+rowspan 橫
+
+輸入表單lname
+<label for="lname"></label>
+單選表單radio
+<input type="radio" id="" name="">
+多選表單checkbox
+<input type="checkbox" id="" name="">
+下拉選單cars
+<label for="cars"></label>
+    <select id="" name="">
+<input type="text" placeholder="placeholder提醒灰色">
+<input type="password" placeholder="type=password密碼變*號">
+
+有序清單<ol> <li>         無序清單
+<ol>                     <ul>
+    <li>第1個</li>       <li>第1個</li>
+    <li>第2個</li>       <li>第2個</li>
+    <li>第3個</li>       <li>第3個</li>
+</ol>                    </ul>
+
+margin>border>padding>內容
+box-sizing的設定值
+content-box：實際寬高＝所設定的數值＋border＋padding，預設值
+border-box：實際寬高＝所設定的數值(已包含border和padding)
+
+
+marquee 跑馬燈
+方向設定：direction="參數值"； up上、dun下、left左、right右
+對齊設定：align="參數值"；top向上、midden垂直至中、botton向下
+速度設定：scrollamount="參數值" ；設定數字，1~10數字大快
+長度設定：height="參數值"；數字，自行設定。
+寬度設定：width="參數值"；數字，自行設定。
+行為設定：behavior="參數值"；可設定 alternate來回、slide入後停
+背景顏色：bgcolor="參數值"；底色
+
+
+border-radius:50% (圓角)
+
+------------------------------------------------------
+● 表格 (以下範例會建立 2 列 2 欄的表格)
+　<table border="1">
+　　　<tr> <td>html教學</td><td>tr中的td為同一列不同欄</td> </tr>
+　　　<tr> <td>這是第2列第1欄</td><td>test</td> </tr>
+　</table>
+
+　<td colspan="3"></td> // 橫跨 3 欄
+　<td rowspan="4"></td> // 直跨 4 列
+　<td valign="top" align="left"></td> // 內容對齊左上
+　<td style="height:25px;"></td> // 設定高度
+
+● 超連結
+　<a href="http://www.yahoo.com">文字超連結</a>　// 要在新視窗開啟超連結就加 target="_blank"
+　<a href="http://www.yahoo.com"><img src="myPic.jpg"/></a>　// 圖片超連結
+　<a href="#" onclick="abc()">顯示文字</a>　// 點擊文字呼叫js函數
+
+● 頁面中加入錨點(同一頁內超連結)
+　<a href="#abc">點擊這裡</a>
+　<h2 id="abc">跳到這裡</h2>
+
+● 按鈕
+◎ <input type="button" value="按鈕上的字" onclick="函數名稱()"/>
+　// 添加一個按鈕，點擊時會呼叫js函數。
+◎ <input type="image" src="my-button.png" onClick="函數名稱()"/>
+　// 添加一個圖片按鈕，點擊時會呼叫js函數。
+
+◎ <!-- 這是 html 的註解 -->
+◎ <br>換一行、<p>換兩行、<p>段落</p>、<hr>水平分隔線
+◎ <input type="text"/>　// 添加文字輸入欄
+◎ <img src="myPic.jpg" width="120" height="60"/>　// 插入圖片

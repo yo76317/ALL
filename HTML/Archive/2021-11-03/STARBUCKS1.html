@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      border: 1px solid black;
+      text-align: center;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+    
+    
+    }
+
+    th {
+      border: 1px solid black;
+    }
+
+    tr,
+    td {
+      border: 1px solid black;
+    }
+
+    .div1 {
+      border: 0px solid black;
+      align-self: flex-end;
+    }
+
+    .div2 {
+      border: 1px solid black;
+      width: 70px;
+      height: 30px;
+      align-self: flex-end;
+      margin: 5px;
+    }
+table{            margin-left: auto; 
+            margin-right: auto;}
+    .div3 {
+      border: 1px solid black;
+      width: 70px;
+      height: 30px;
+      align-self: flex-end;
+      margin: 5px;
+    }
+
+    .p1 {
+      border: 0px solid black;
+      width: 70px;
+      height: 30px;
+      align-self: flex-end;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h2>STARBUCKS</h2>
+      <table>
+
+        <tr>
+          <th>品名</th>
+          <th>單價</th>
+          <th>數量</th>
+          <th>總價</th>
+        </tr>
+
+        <tr>
+          <td>A</td>
+
+          <td>
+            <form action="./starbuclvs.html" id="form1">
+              <label for="A1"></label>
+              <input type="text" name="A1" id="A1">
+          </td>
+
+          <td>
+            <label for="A2"></label>
+            <input type="text" name="A2" id="A2">
+          </td>
+
+          <td>
+            <p id="resu1"></p>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>B</td>
+
+          <td>
+            <label for="B1"></label>
+            <input type="text" name="B1" id="B1">
+          </td>
+
+          <td>
+            <label for="B2"></label>
+            <input type="text" name="B2" id="B2">
+          </td>
+
+          <td>
+            <p id="resu2"></p>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>C</td>
+          <td>
+            <label for="C1"></label>
+            <input type="text" name="C1" id="C1">
+          </td>
+
+          <td>
+            <label for="C2"></label>
+            <input type="text" name="C2" id="C2">
+          </td>
+
+          <td>
+            <p id="resu3"></p>
+          </td>
+
+        </tr>
+      </table>
+
+      <hr width=100%;>
+
+      <div class="div1">
+        <div class="div2" id="resu4">加總</div>
+        <div class="div3" id="resu5">A</div>
+
+        <p class="p1">
+          <input type="submit" value="submit" id="submit1">
+        </p>
+        </form>
+
+      </div>
+    </div>
+  </header>
+  <script src="./JS/starbuclcs.js"></script> -->
+
+  <!-- <h3>表單</h3>
+    <form action="./JS/starbuclcs.js" id="form1">
+        <p><label for="lname">欄位一</label></p>
+        <p><input type="text" id="num1" name="lname" value=""></p>
+        
+        <p><label for="fname">欄位二</label><br></p>
+        <p><input type="text" id="num2" name="fname" value=""></p>
+
+        <p><label for="open">欄位三</label></p>
+        <p><input type="text" id="option1" name="option1"></p>
+
+        <p><input type="submit" value="Submit" id="resu1"></p>
+    </form>
+
+    <p id="resu2">結果:</p>
+
+    <script src="./JS/index-js.js"></script>
+
+</body>
+
+</html>

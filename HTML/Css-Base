@@ -1,0 +1,200 @@
+style=""
+background-color 背景顏色
+背景加圖片background: url('./images//0101.jpg');
+color 字體顏色	
+font-family 字體樣式	
+font-size 字體大小	
+text-align 內容對齊	
+font-size 字體大小
+font-family 字體
+font-style 字體形式 italic斜體
+font-weight 粗細 bold粗體;
+letter-spacing 字元間距
+word-spacing 單詞間距
+white-space:normal  空白區域
+text-decoration:  overline;上線   underline;底線   line-through;刪除線
+
+overflow:hidde 超出框後文字不顯示
+
+colspan 直
+rowspan 橫
+
+Flex 外容器屬性↓
+display
+flex-flow
+flex-direction
+flex-wrap
+justify-content
+align-items
+
+Flex 內元件屬性↓
+flex
+flex-grow
+flex-shrink
+flex-basis
+order
+align-self
+flexbox
+
+
+display:none  不顯示
+display:block  區塊元素，會佔一行(換行)
+display:inline-block  行內區塊 (圖片或文字均不換)
+
+display:flex 類似inline-block
+display 預設為「flex」
+display:flex 宣告彈性盒子
+
+display:flex 後面p不換行
+display:inline-flex 後面p換行
+
+justify-content:
+flex-start 靠左對齊
+flex-end 靠右對齊
+center center 置中
+space-between 均分到底
+space-around 內均分
+space-evenly 內外均分
+
+---------------------------------
+
+align-self
+
+
+
+flex-direction
+內容元素的「排列方向」
+1.row:預設值，左右，上下
+2.row-reverse:右左，下上
+3.column:上下，左右
+4.column-reverse下上，右左
+
+justify-content
+水平對齊
+center置中 flex-start左 flex-end右
+space-between 均分 space-around:均分留邊
+
+align-items
+垂直對齊
+start對齊上面 end對齊下面 center置中 
+stretch均分(全撐開)，預設值 baseline均分留外邊
+
+align-self
+單元件位置
+start對齊上面 end對齊下面 center置中 
+stretch 均分，預設值  baseline均分留外邊
+
+align-content 
+多單元位置
+start對齊上面 end對齊下面 center置中 
+space-between第一與最後一.對齊最上方最下方
+space-around平均分配間距(上下左右)
+stretch內容全撐開,預設值
+
+order
+直接指定一個數字
+沒指定的預設為0
+指定後會排到後面(右邊)
+
+flex-wrap
+nowrap單行預設 wrap多行
+wrap-reverse多行內容反轉
+
+line-height 行高
+line-height:normal  行高依照(元素設定文字大小 x 1.2)* 作依據
+ p：12(px) x 1.2 =14.4(px)
+ line-height:180% 行高依照(父元素文字大小 x 180%)作依據 
+ line-height:1.8  行高依照(元素設定文字大小 x 1.8)作計算
+ p：12(px) x 設定值 =21.6(px)
+  line-height:18px  不管字型大小，你設定行高是 18px
+行高等於高度的話,則文字會垂直居中
+
+
+text-decoration 消除超聯結底線
+吃外部Css檔 <link rel="stylesheet" href="./css/external.css">
+
+a:link{color:red;text-decoration: none;}
+/* 未聯結 text-decoration: none; 這是去掉下底線 */
+a:hover{color:lightcoral;font-size:150%;}
+/* 移至聯結 */
+a:active{color:blue;font-size:200%;}
+/* 按壓聯結時 */
+a:visited{color:green;font-size:250%;}
+/* 已聯結後 font-size不支援 */
+
+position: relative; 相對位置
+position: absolute; 絕對位置
+position: fixed; 固定位置
+
+
+body>*{border:4px solid lightgray;}  body全加線
+body>*:not(aside,section){border:4px solid lightgray;} 除aside,section不加
+
+大於(>)只會影響到直接的子元素
+加號(+)後方同層級的第一個元素
+取代符號(~)後方同層級的全部元素
+
+overflow 超出預設區處理方式
+overflow: auto; 捲軸.預設
+overflow:visible;超出範圍，不使用捲軸
+overflow:hidden;自動隱藏超出
+overflow:scroll;自動產生捲軸
+overflow:inherit;繼承父元素的可見性
+
+.item-list
+
+-----------------------------------------------
+
+
+1. 使用 class 和 id 對應 CSS 樣式
+　　在網頁的 head 標籤中加入以下敘述 定義樣式：
+　　<style type="text/css">
+　　　.redTxt　{　color: #F00;　}　/* 這是 css 的註解 */
+　　　#blueTxt {　color: #03F;　}　/* 樣式名稱 {　屬性: 值　} */
+　　</style>
+
+　　<p class="redTxt">hello</p> // class 對應 . 開頭的樣式
+　　<p id="blueTxt">world</p> // id 對應 # 開頭的樣式
+　　// 在一個頁面中，同一個 class 可多處使用，但同一個 id 只能使用一次。
+
+2. 使用外部 CSS 樣式
+　　新增一個副檔名為 css 的檔案(例如：test.css)，然後寫入需要的　樣式名稱 { 屬性:值 }
+　　在網頁的 head 標籤中加入以下其中一種敘述。
+　　【方法1】連結外部 CSS 樣式 <link rel="stylesheet" type="text/css" href="test.css">
+　　【方法2】從外部匯入 CSS 樣式 <style type="text/css">　@import url("test.css");　</style>
+
+3. 直接套用 CSS 樣式 (不需事先定義)
+　　<p style="color:#0C0;">hello</p>　// 例如把<p>中的文字設為綠色
+
+4. 行內局部套用 CSS 樣式 (使用<span>)
+　　<p>這裡是<span style="color:#F00;">紅色</span>，這裡不變色。</p>
+　　結果 --> 這裡是紅色，這裡不變色。
+
+● 設定內距(例如用來調整 div 或表格中 文字與邊緣的距離)
+　padding: 15px 20px 8px 5px;　// 上、右、下、左 的間距
+　padding: 15px 20px;　// 上下、左右 的間距
+　padding: 15px 20px 8px;　// 上、左右、下 的間距
+　padding: 15px;　// 上下左右 都留同樣的間距
+
+● 設定外距
+　屬性名稱為 margin，語法格式和設定內距一樣，也可以單獨設定。
+　// 例如 margin-top: 0px; 為設定上間距
+
+● 移動、旋轉、縮放
+　transform: translate(50px,20px); // 朝 x、y 軸分別位移 50、20 像素
+　transform: rotate(45deg);　// 旋轉 45 度
+　transform: scale(3);　// 放大 3 倍
+　transform: scaleX(-1);　// 水平翻轉(鏡射)
+　transform: translateX(80px) rotate(30deg);　// 移動+旋轉，在 transform 中加空格即可
+
+◎ 設定相對位置(以目前位置為基準)： position: relative;　left: 100px;　// 向右移 100 像素
+◎ 設定絕對位置(以所在結構為基準)： position: absolute;　top: 80px;　// 向下移 80 像素
+　(所在結構必需有定位，否則無效)
+◎ 設定不透明度： opacity: 0.5;　// 數值愈小愈透明
+◎ 設定重疊順序： z-index: 5;　// 數字大的覆蓋小的(只作用在定位的元素上)
+◎ 設定行距： line-height: 1.5em;　// 以 14px 的文字來說，1.5em 就相當於行高 21px。
+◎ div置中： margin:0px auto;
+◎ <p style="text-align:center;">文字水平方向對齊</p>
+◎ 顯示 display: block;　　隱藏 display: none;
+◎ 避免元素(例如 div)造成換行： display: inline;
+◎ 去除 iOS 按鈕預設的圓角與漸層　-webkit-appearance:none;

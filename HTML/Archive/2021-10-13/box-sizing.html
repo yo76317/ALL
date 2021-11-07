@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 1.模式 */
+        /* sidth = margin padding content border */
+        
+        /* 2.模式 */
+        /* width 不超940px */
+        
+        #box-1 {
+          background-color: lightgrey;
+          width: 300px;
+          border: 15px solid green;
+          padding: 1px;
+          margin: 10px;
+          
+        }
+
+        #box-2 {
+          background-color: lightgrey;
+          width: 300px;
+          border: 15px solid rgb(116, 13, 126);
+          padding: 10px;
+            /* 內距 上:右:下:左 */
+          margin: 10px;
+            /* 邊界距離，上右下左，auto置中 */
+            box-sizing: border-box
+        }
+        </style>
+</head>
+
+<body>
+    <div id="box-1">div-1 不使用box-szaing 作用在margin以內</div>
+    <div id="box-2">div-2 使用box-sizing 作用在border以內</div>
+<p>這邊<span style="color:crimson">span這標籤是行內，可加style，</span>不會斷行的意思</p>
+</body>
+</html>

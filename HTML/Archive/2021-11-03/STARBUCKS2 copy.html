@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{box-sizing: border-box;}
+        
+
+        h2 {
+            border: 1px solid rgb(35, 20, 240);
+        }
+
+        td {
+            border: 1px solid rgb(223, 56, 56); 
+    
+        }
+
+        div {
+            border: 1px solid black;
+        }
+        
+        table{            
+
+            width:100%;
+        }
+
+        .div2 {
+            border: 1px solid rgb(31, 231, 31);
+            display:flex;
+            justify-content: flex-end;
+        }
+
+        input[type='text'],input[type='text']{
+            width:95%;        
+        }
+
+</style>
+</head>
+
+<body>
+    <div class="div">
+        <H2>STARBUCKS</H2>
+        <form action="JS/starbuclcs.js">
+            <table>
+
+                <tr>
+                    <th>品名</th>
+                    <th>單價</th>
+                    <th>數量</th>
+                    <th>總價</th>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" name="id-1" value="果汁" id="id-1">
+                    </td>
+                    <td>
+                        <input type="number" name="money-1" value="10" id="money-1">
+                    </td>
+                    <td>
+                        <input type="number" name="amount1" value="" id="amount1">
+                    </td>
+                    <td>
+                        <input type="number" name="amount1" value="" id="resu1">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" name="id-2" value="奶茶" id="id-2">
+                    </td>
+                    <td>
+                        <input type="number" name="money-2" value="20" id="money-2">
+                    </td>
+                    <td>
+                        <input type="number" name="amount2" value="" id="amount2">
+                    </td>
+                    <td>
+                        <input type="number" name="amount2" value="" id="resu2">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" name="id-3" value="白開水" id="id-3">
+                    </td>
+                    <td>
+                        <input type="number" name="money-3" value="30" id="money-3">
+                    </td>
+                    <td>
+                        <input type="number" name="amount3" value="" id="amount3">
+                    </td>
+                    <td>
+                        <input type="number" name="amount3" value="" id="resu3">
+                    </td>
+                </tr>
+            </table>
+
+            <div class="div2">
+                <tr>
+                    <td>
+                        <input type="submit" id="resu4" value="計算總額">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p id="resu4" class="p1">resu:</p>
+                    </td>
+                </tr>
+            </div>
+
+
+        </form>
+    </div>
+
+
+    <script src="./JS/starbuclcs.js"></script>
+</body>
+
+</html>

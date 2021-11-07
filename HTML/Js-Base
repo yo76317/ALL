@@ -1,0 +1,99 @@
+ 物件.屬性="值"
+ 事件.方法()
+
+
+let var 變數宣告
+var 函式作用域(function)裡
+let 區塊(block)裡
+button onclick
+
+連接HTML
+<script src="JS位址"></script>
+輸入在<title>後，讓html抓到JavaScript
+
+彈出視窗alert("helloo word js"); 
+
+break 斷句，不往下跑
+
+--------------------------------------------
+函數
+　 function abc(){ }　// 宣告一個名為 abc 的函數
+　 abc();　// 呼叫函數 abc
+
+● if 判斷式
+　if ( n == 100 ){　}
+　else if ( n < 60 ){　}
+　else {　}　// 以上條件都不符合，就執行 else
+
+　關係運算子:　等於==　不等於!=　大於>　大於等於>=　小於<　小於等於<=
+　邏輯運算子:　且&&　或||
+　例如 if( a>5 || b<3 ){　} 代表 a大於5 或 b<3 都符合條件
+
+● for 迴圈
+　for (var i=0; i<5; i++) {　console.log( i );　}
+　說明：i 的啟始值為 0， i 小於 5 就繼續跑迴圈， i 每次加 1
+　結果會依序輸出 0、1、2、3、4
+
+● 設定元素的 CSS style (例如設定圖片的方向和位置)
+　<img id="dog" style="position:absolute; left:50px;" src="puppy.png"/>
+　var mypic = document.getElementById("dog");　// 取得 id 為 dog 的元素
+　mypic.style.transform = "rotate(45deg)";　// 設定旋轉角度
+　mypic.style.left = "200px";　// 要先用 position 定位
+　※ 若只要取得位置座標的整數，就用 parseInt( mypic.style.left );
+
+● 抓取元素的 CSS 屬性 (屬性不用寫在 style="" 裡)
+　<div id="myDIV">.....</div>
+　var myDIV = document.getElementById("myDIV");
+　window.getComputedStyle(myDIV);　// 抓出元素所有的屬性
+　window.getComputedStyle(myDIV).getPropertyValue("height");　// 抓取元素的高度屬性
+
+● 按鍵觸發事件
+　function abc(){　if ( event.keyCode == 65 ){ console.log("A鍵被按下"); }　}
+　document.onkeydown = abc;　// 按下按鍵就呼叫函數abc
+　※ 查詢 keyCode 請至 https://keycode.info
+
+● 計時器
+　setTimeout( "myTest()", 3000 );　// 在 3 秒(3000毫秒)後呼叫函數 myTest
+　setInterval( "myTest()", 3000 );　// 每間隔 3 秒(3000毫秒)呼叫函數 myTest
+　以上兩者的差異，在於 setTimeout 只會呼叫一次，setInterval 則是會重複呼叫。
+　◎ 停止(取消)定時呼叫
+　　var myTimer = setTimeout( "myTest()", 3000 );
+　　clearTimeout( myTimer );　// 改成 clearInterval 即取消重複呼叫
+
+● 字串相關
+　var str = "hello_kitty";
+　var ary = str.split("_");　// 分割字串(結果 ary[0] 為 hello)
+　str.length;　// 抓取字串長度(結果: 11)
+　str.substr(4,3);　// 從第 5 個字開始，連續抓取 3 個字。(結果: o_k)
+
+● 數學、數字
+　Math.random();　// 隨機產生 0(包含) ~ 1(不含) 的小數亂數
+　Math.floor( n );　// 無條件捨去 n 的小數
+　var a = Number("205");　// 字串轉數字
+　Math.round( 數值*100 ) / 100　// 四捨五入到小數第 2 位
+
+google雲端硬碟共用轉址
+
+● 陣列(Array)
+　var arr = [];　// 宣告陣列
+　arr.push("book");　// 在陣列最後增加資料
+　arr.splice( 1, 2 );　// 刪除 array 中的資料(例如從 index 1 開始,連續刪除 2 筆 )
+　arr = [];　// 清空 array
+　arr.length;　// 取得陣列長度
+
+● 取得圖片寬度和高度
+　var myImg = new Image();
+　myImg.src = "http://xxx.jpg";
+　var w = myImg.width;　　var h = myImg.height;
+　window.alert( "圖片尺寸： " + w + " x " + h );
+
+◎ // 單行註解　、　/* 可多行註解 */
+◎ JavaScript 要寫在 <script> 和 </script> 之間，可放在 head 或 body 標籤中。
+◎ console.log("hello world");　// 可在 Chrome 瀏覽器的 Console 面板(按F12鍵)輸出訊息
+◎ var k = 5;　// 宣告變數(不需要加型態)
+◎ document.getElementById("id名稱").value;　// 取得元素的值
+◎ document.getElementById("id名稱").innerHTML;　// 取得 html 標籤之間的內容
+◎ window.alert("hello javascript");　// 彈出視窗(可顯示文字訊息，換行為 \n )
+◎ location.href="http://www.js.com";　// 頁面跳轉(超連結到別的網頁)
+◎ window.open( "http://www.js.com" );　// 在新視窗開啟超連結
+◎ history.back();　// 回到上一頁

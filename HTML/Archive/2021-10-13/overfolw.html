@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box-1 {
+            background-color: darkgoldenrod;
+            width: 200px;
+            height: 150px;
+            border: 3px solid black;
+            padding: 30px;
+            /* 內距 上:右:下:左 */
+            margin-bottom: 20px;
+            /* 邊界距離，上右下左，auto置中 */
+            overflow: hidden;
+            /* 當我們超出視窗時，可應對方式 */
+        }
+
+        #box-2 {
+            background-color: lightgrey;
+            width: 300px;
+            height:50px;
+            border: 15px solid green;
+            padding: 10px 20px 30px 40px;
+            /* 內距 上:右:下:左 */
+            margin: 10px auto 10px auto;
+            /* 邊界距離，上右下左，auto置中 */
+            overflow: scroll;
+            /* 當我們超出視窗時，可應對方式 */
+        }
+        #box-3 {
+            background-color:darkred;
+            width:200px;
+            height:150px;
+            border:solid;
+            display:inline-block;
+        }
+        #demo1{visibility:hidden;border:1px solid red;}
+        /* 內容消失，但物件位置還在 */
+        #demo2{display:none;border:1px solid red;}
+        /* 內容及物件完全消失 */
+        #demo3{opacity:50;border:1px solid red;}
+        /* 背景的被覆蓋程度 */
+        
+    </style>
+</head>
+
+<body>
+    <div id="box-1">overflow:hidden; 當文字內容超出div容納範圍時就看不到~</div>
+    <div id="box-2">overflow:scroll; 當文字內容超出div容納範圍時，應對方式為滾軸，但要注意寬高，文字太少時會影響效果。</div>
+    <p>這邊<span style="color:crimson">span這標籤是行內，可加style，</span>不會斷行的意思</p>
+   
+    <dvi">
+        <p>下面三項都是消失方式</p>
+        <div id="demo1">A</div>
+        <div id="demo2">B</div>
+        <div id="demo3">C</div>
+    </dvi>
+</body>
+
+</html>

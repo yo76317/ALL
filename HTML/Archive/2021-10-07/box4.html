@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANALOG</title>
+
+    <style>
+        body {
+            font-size: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing:1px;
+            /* 字詞間距 */
+            background-color: white
+        }
+
+        #page {
+            max-width: 940px;
+            min-width: 720px;
+            margin: 10px auto 10px auto;
+            /* 邊界距離，上右下左，auto置中 */
+            padding: 20px;
+            border: 4px double black;
+            background-color: white;
+        }
+
+        #logo {
+            width: 150px;
+            margin: 10px auto 25px auto;
+            /* 邊界距離，上右下左，auto置中 */
+        }
+
+        ul {
+            width: 580px;
+            /* 表格長度(影響到border-top長度) */
+            padding: 15px;
+             /* 內距 上下左右都10px */
+            margin: 0px auto 0px auto;
+            /* 元素與元素間距 */
+            border-top: 2px solid rgb(0, 0, 0);
+            /* 加入線條在ul上方 粗細 樣式 顏色 */
+            border-bottom: 1px solid black;
+              /* 加入線條在ul下方 粗細 樣式 顏色 */
+              text-align: center;
+        }
+
+        li {
+            display: inline-block;
+            /* display(顯示模式)
+            行內元素(inline)span、a、imput、img
+            區塊元素(block)div、ul li、p、h1 */
+            margin: 0px auto 0px auto;
+            /* 邊界距離，上右下左，auto置中 */
+        }
+
+        p {
+            text-align: justify;
+            width: 600px;
+            margin: 20px auto 20px auto;
+            font-weight: 400px;
+            /* normal = 400px */
+        }
+
+        a:hover {
+            color:red;
+            background-color: rgb(247, 151, 73);
+        }
+
+        a {
+            color: black;
+            text-decoration: 400px;
+            text-transform: uppercase;
+            /* lowercase全小寫 
+               uppercase全大寫
+               capitalize第一個字大寫 */
+            padding: 6px 7px 5px 7px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="page">
+        <div id="logo">
+            <img src="./images/logo.gif" alt="logl">
+        </div>
+
+        <ul>
+            <li><a hred="">Home</a></li>
+            <li><a hred="">For Sale</a></li>
+            <li><a hred="">Repairs</a></li>
+            <li><a hred="">About</a></li>
+            <li><a hred="">Contact</a></li>
+        </ul>
+
+        <p>
+            <img src="./images/keys.jpg" alt="main">
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dolor, quo praesentium fuga sed doloremque
+            blanditiis.
+        </p>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

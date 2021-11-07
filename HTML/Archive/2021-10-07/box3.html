@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box</title>
+
+<head>
+    <style>
+        div {
+            border: 1px solid black;
+            background-color: lightblue;
+
+            margin-top: 10px;
+            /* 上間距 */
+
+            margin-bottom: 10px;
+            /* 下間距 */
+
+            margin-left: 10px;
+            /* 左間距 */
+
+            margin-right: 10px;
+            /* 右間距 */
+        }
+
+        #div_1 {
+            border: 1px solid black;
+            background-color: lemonchiffon;
+
+            margin-top: 40px;
+            /* 上間距 */
+
+            margin-bottom: 40px;
+            /* 下間距 */
+
+            margin-left: 40px;
+            /* 左間距 */
+
+            margin-right: 40px;
+            /* 右間距 */
+        }
+
+        div.div_2 {
+            border: 1px solid black;
+            background-color: palegreen;
+
+            margin-top: 20px;
+            /* 上間距 */
+
+            margin-bottom: 20px;
+            /* 下間距 */
+
+            margin-left: 20px;
+            /* 左間距 */
+
+            margin-right: 20px;
+            /* 右間距 */
+        }
+
+        #div_3 {
+            border: 1px solid black;
+            background-color: rgb(211, 105, 98);
+            margin: 30px;
+            /* 元素與元素間距.上下左右間距都30 */
+        }
+
+        #div_4 {
+            border: 1px solid black;
+            background-color: rgb(206, 135, 228);
+            line-height: 10em;
+            /* 設定box高低 */
+        }
+
+        #div_5 {
+            border: 1px solid black;
+            background-color: rgb(86, 143, 228);
+            
+            margin: 20px auto;
+            /* 寬度自動 */
+            
+            text-align:center;
+            /* 文字置中 */           
+        }
+
+        #div_6 {
+            border: 1px solid black;
+            background-color: rgb(133, 245, 192);
+            padding: 10px 20px 30px 40px;
+            /* 內距 上:右:下:左 */
+        }
+
+        #div_7 {
+            border: 1px solid black;
+            background-color: rgb(174, 141, 250);
+            padding: 30px;
+            /* 內距 上下左右都30px */
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>上下左右的間距</h2>
+    <div>空div.會吃到div全域</div>
+    <div>div，上下左右間都10px</div>
+    <div>空div.會吃到div全域</div>
+    
+    <div id="div_1">指定div，上下左右間距都40px</div>
+    
+    <div>空div.會吃到div全域</div>
+
+    <div class="div_2">class群組指定div，上下左右間都20</div>
+    
+    <div>空div.會吃到div全域</div>
+    
+    <div id="div_3">指定div_3，margin元素與元素間距.上下左右間距都30</div>
+
+    <div>空div.會吃到div全域</div>
+    
+    <div id="div_4">指定div_4，line-height設定box高低</div>
+    
+    <div>空div.會吃到div全域</div>
+    
+    <div id="div_5">指定div_5，marginc:20px auto，寬度自動，text-align:center文字置中</div>
+    
+    <div>空div.會吃到div全域</div>
+    
+    <div id="div_6">指定div_6，padding:10px 20px 30px 40px，內距 上:右:下:左</div>
+    
+    <div>空div.會吃到div全域</div>
+    
+    <div id="div_7">指定div_6，padding:30px 內距上下左右都30px</div>
+    
+    <div>空div.會吃到div全域</div>
+</body>
+
+</html>

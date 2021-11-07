@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .flex-container{display:flex;
+        flex-direction:flex;
+        /* 直行 flex-direction: column-reverse   */
+        /* 橫列 flex-direction: row */
+        /* 換行 flex-wrap: wrap; */
+        /* 對齊 flex-flow: row wrap; */
+        background-color:turquoise
+            
+    
+        }
+        
+        .flex-container > div{border:1px solid black;
+                            color:rgb(87, 67, 179);
+                            background-color:rgb(163, 205, 224);
+                            width:50px;
+                            line-height:50px;
+                            margin:10px;
+                            text-align:center;
+                        }
+
+        
+    </style>
+</head>
+<body>
+  
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>

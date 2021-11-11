@@ -1,0 +1,93 @@
+header {
+    width: 100%;
+    background-image: url('https://picsum.photos/seed/picsum/300/300');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    border: 0px solid rgb(28, 248, 113);
+
+    text-shadow: 3.2px 8px 1.6px rgb(193, 231, 247),
+    -4.8px 1.6px 1.6px rgb(238, 16, 16),
+    2.8px -4.8px 1.6px rgb(158, 248, 178); 
+}
+
+.div-top {
+    border: 0px solid black;
+}
+
+h2 {
+    text-align: center;
+    margin:70px auto;
+}
+
+h3{text-align: center;}
+
+p{text-align:center;}
+
+.nav1 {
+    border: 0px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    text-shadow:rgb(255, 255, 255) -10px 4px 3px;    
+}
+
+div {
+    border: 1px solid black;
+    width:300px;
+}
+
+.div1 {
+    background: rgb(103, 223, 183);
+    background-image: url('https://i.picsum.photos/id/549/300/300.jpg?grayscale&hmac=quXdzJ1k9CPHVjhUs-6j3Aqxldw2PiWacWVmalVk7IE');
+    font-size: 30px;
+    color: burlywood;
+    text-shadow:-1px 0 black, 0 1px black,
+    1px 0 black, 0 -1px black
+
+}
+
+.div2 {
+    background: rgb(129, 18, 133);
+    background-image: url('https://i.picsum.photos/id/655/300/300.jpg?grayscale&hmac=-rbGWdRlDgsHPFYi-wFBW2Zg3PI8dytcZ427gwq-szk');
+    font-size: 30px;
+    text-shadow: 0 0 3.2px #87F, 0 0 3.2px #87F,
+        0 0 03.2px #87F
+}
+
+.div3 {
+    background: rgb(47, 158, 25);
+    background-image: url('https://i.picsum.photos/id/236/200/300.jpg?grayscale&hmac=jLWXciiHreRplParx3fkyAMkW8murrwb41UfTumVjYQ');
+    font-size: 30px;
+    text-shadow: rgb(255, 255, 255) 1.6px 1.6px 3.2px
+}
+
+@media(max-width:600px) {
+    header {
+        height: 100vh;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    header h3 {
+        margin-top: 0;
+    }
+    img {
+        width: 100%;
+    }
+    body {
+        background-color: lightgrey;
+    }
+    .col {
+        width: 80%;
+        border: 1px solid black;
+        /* background-color: lightskyblue; */
+    }
+    .col h3 {
+        text-align: center;
+        font-size: 24px;
+        color: red;
+    }
+}

@@ -7,7 +7,7 @@ $range=$_GET['id'];
 //如果有帶ID值在網址，就可以代入語法↓
 
 // $range=(isset($_GET['id']))?$_GET['id']:20;
-// 如果網址有ID就代入，沒ID的話就自己代入20
+// 如果網址有ID就代入，沒ID的話就自己代入20 . 三元運算式
 
 $sql="select * from `students` where `id`< $range";
 $rows=$pdo->query($sql)->fetchAll();

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>BMI值計算</h2>
+    <hr>
+    <p>BMI值計算公式: BMI = 體重(公斤) / 身高2(公尺2)
+        例如：一個52公斤的人，身高是155公分，則BMI為 :
+        52(公斤)/1.552 ( 公尺2 )= 21.6
+        體重正常範圍為 BMI=18.5～24</p>
+    <form action="./BMI.php" method="get">
+        <p>身高:<input type="text" name="cm" id="cm"></p>
+        <br>
+        <p>體重:<input type="text" name="kg" id="kg"></p>
+        <br>
+        <p><input type="submit" value="計算"></p>
+    </form>
+</body>
+
+</html>

@@ -50,3 +50,32 @@ footer{
     float: left;
     width: calc(100% - 120px);
 }
+
+#regForm input{
+    border:0px;
+}
+
+#regForm input{
+    font-style: 16px;
+    padding:5px 2px;
+    border-bottom: 1px solid #999;
+}
+
+#regForm input{
+    border:0px;
+}
+
+#regForm input{
+    font-style: 16px;
+    padding:5px 2px;
+    border-bottom: 1px solid #999;
+}
+
+#regForm input[type='submit'],
+#loginForm input[type='submit'],
+#regForm input[type='reset']{
+    border:1px solid #555;
+    border-radius:10px;
+    padding:5px 10px;
+    margin-top:10px;
+}

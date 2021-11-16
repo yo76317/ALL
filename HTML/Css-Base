@@ -202,3 +202,7 @@ width: calc(100%/3);
 ◎ 顯示 display: block;　　隱藏 display: none;
 ◎ 避免元素(例如 div)造成換行： display: inline;
 ◎ 去除 iOS 按鈕預設的圓角與漸層　-webkit-appearance:none;
+
+
+文字
+word-break 超出儲存格就換行

@@ -31,6 +31,6 @@ echo "<hr>";
 echo $sql_member;
 echo "<hr>";
 
-header("location:../index.php");
+// header("location:../index.php");
 // 這是轉指向頁面 header("Refresh:1;url=../index.php")
 ?>

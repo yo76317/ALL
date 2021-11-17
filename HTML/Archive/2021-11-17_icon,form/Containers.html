@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="bg-dark text-white">
+    <h1>
+bg-dark背景顏色、text-white文字顏色
+    </h1>
+  </div>
+
+  <div class="container-fluid bg-primary">
+    <h1>
+      container-fluid 液態版形 (滿版 whidth:100%)、bg-primary
+    </h1>
+  </div>
+
+  <div class="container bg-danger">
+    <h1>
+      container 固定版形、bg-danger
+    </h1>
+  </div>
+
+  <div class="p-3 bg-danger">
+    <h1>
+      p-2 padding內距、bg-danger
+    </h1>
+  </div>
+
+  <div class="my-4 bg-danger">
+    <h1>
+      my-4 margin 左右邊界、bg-danger
+    </h1>
+  </div>
+
+  <div class="pt-3 bg-info">
+    <h1>pt-3 margin 上邊界、bg-info</h1>
+  </div>
+
+  <div class="container-fluid p-3 my-5  border bg-dark text-white">
+    <h1>
+        container-fluid p-3 my-5  border bg-dark text-white<br>
+        容器-液體(滿版,whith100%)   padding內縮  margin上下外擴  bg容器背景  text字體顏色 
+    </h1>
+</div>
+
+<div class="container p-3 my-5  border bg-dark text-white">
+  <h1>
+      container p-3 my-5  border bg-dark text-white<br>
+      容器(固版,固定寬度)   padding內縮  margin上下外擴  bg容器背景  text字體顏色 
+  </h1>
+</div>
+
+<div class="container-md bg-danger">
+  <h1>
+    container-md  bg-danger 簡單來說就是低於設定的值，就會變container-fluid 液態版形(滿板)
+  </h1>
+</div>
+
+<div class="row bg-dark text-white p-5">
+  <h2>Grid system、網格系統:</h2>
+  <p>平均12格，下面四個div都佔6格<br>
+  設 col-md-6 代表佔6行<br>
+  col-md 代表md的範圍時>=768px<br>
+就會從原本6行:6行=12行，變成全部都單行=12行</p>
+<div class="col-md-6 " > 
+   <h1>只要記</h1> 
+  </div> 
+   <div class="col-md-6"  > 
+   <h1>container</h1>
+  </div> 
+   <div class="col-md-6" > 
+   <h1>row</h1> 
+  </div> 
+  <div class="col-md-6"  > 
+   <h1>col</h1>
+  </div> 
+ </div>
+
+ <hr>
+ <h2>簡易說明</h2>
+ <div class="row">
+  <div class="col-md-3 " > 
+   <h1> col-md-3 </h1> 
+  </div> 
+  <div class="col-md-3 "  > 
+   <h1> col-md-3 </h1>
+  </div> 
+   <div class="col-md-3 " > 
+   <h1> col-md-3 </h1> 
+  </div> 
+  <div class="col-md-3"  > 
+   <h1> col-md-3 </h1>
+  </div> 
+ </div>
+ 
+ <div class="row" >
+  <div class="col-md-6 " > 
+   <h1> col-md-6 </h1> 
+  </div> 
+   <div class="col-md-6 "  > 
+   <h1> col-md-6 </h1>
+  </div> 
+   <div class="col-md-6 " > 
+   <h1> col-md-6 </h1> 
+  </div> 
+  <div class="col-md-6 "  > 
+   <h1> col-md-6 </h1>
+  </div> 
+ </div>
+ 
+ <div class="row" >
+  <div class="col-3 " > 
+   <h1> col-3 </h1> 
+  </div> 
+  <div class="col-3 " > 
+   <h1> col-3 </h1> 
+  </div> 
+  <div class="col-3 " > 
+   <h1> col-3 </h1> 
+  </div> 
+   <div class="col-3 " > 
+   <h1> col-3 </h1> 
+ </div>
+ 
+ <div class="row" >
+  <div class="col-6 " > 
+   <h1> col-6 </h1> 
+  </div> 
+  <div class="col-6 " > 
+   <h1> col-6 </h1> 
+  </div> 
+  <div class="col-6 " > 
+   <h1> col-6 </h1> 
+  </div> 
+   <div class="col-6 " > 
+   <h1> col-6 </h1> 
+ </div>
+ 
+</body>
+</html>

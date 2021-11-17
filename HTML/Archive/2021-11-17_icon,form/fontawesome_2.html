@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板</title>
+    <link rel="stylesheet" href="./Css/basic_2.css">
+    <link rel="stylesheet" href="./Css/style_2.css">
+    <script src="https://kit.fontawesome.com/ab96302682.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+</head>
+<body>
+    <div class="form-box">
+            <div class="form-header">
+                <h1 class="form-header-title"><i class="far fa-play-circle"></i>留言板</h1>
+            </div>
+
+      <form action class="form-body">
+         <div class="form-group">
+            <label for="username"><i class="fas fa-signature"></i></i>姓名:</label>
+            <input type="username" name="username" id="username">
+         </div>
+    
+         <div class="form-group">
+            <label for="email"><i class="far fa-envelope"></i>信箱</label>
+            <input type="email" name="email" id="email">
+         </div>
+    
+         <div class="form-group">
+            <label for="comment"><i class="fas fa-user-edit"></i>留言:</label>
+            <textarea name="comment" id="comment" cols="30" rows="10" class="form-control" placeholder="請輸入留言"></textarea>
+         </div>
+
+         <div class="form-group">
+            <button class="submit-btn" typ="submit">送出</button>
+         </div>
+      </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css.css/style.css">
+    
+</head>
+
+<body>
+<h2>偽元素</h2>
+    <div>
+        <p class="div1 , div2">-這是html&lt;p&gt;代入2群組class="div1 , div2"-</p>
+    </div>
+<div>
+    <p>超聯結，使用偽元素，使超連結的 href 內容與 target 內容顯示出來<br>
+        a::before{<br>
+            content: attr(href);<br>
+            color:red;<br>
+          }<br>
+          a::after{<br>
+            content: attr(target);<br>
+            color:green;<br>
+          }<br>
+          &lt;a href="https://www.google.com" target="_blank"=&gt;自行輸入區&lt;/a&gt;</p>
+
+        <a href="https://www.google.com" target="_blank">自行輸入區</a>
+        <a class="a2" href="https://www.google.com" target="_blank">自行輸入區</a>
+</div>
+
+    <hr>
+
+    <table>
+        <caption>電話簿</caption>
+        <tr>
+            <th>th姓名</th>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+            <td>D</td>
+            <td>E</td>
+        </tr>
+        <tr>
+            <th rowspan=2>th電話rowspan=2</th>
+            <td>0911-456789</td>
+            <td rowspan=2>0933-123456 rowspan=2</td>
+            <td>0944-567289</td>
+            <td rowspan=2>0966-234567 rowspan=2</td>
+            <td rowspan=2>0999-456789 rowspan=2</td>
+        </tr>
+        <tr>
+            <td>0922-345678</td>
+            <td>0955-123589</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <div class="div3">
+        <div>
+            <ul>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+            </ul>
+        </div>
+
+        <div>
+            <ul class="list-unstyled">
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+            </ul>
+        </div>
+
+        <div>
+            <ul class="list-unstyled">
+                <li>會</li>
+                <li>消</li>
+                <li>除</li>
+            </ul>
+        </div>
+
+    </div>
+
+<hr>
+
+</body>
+
+</html>

@@ -1,6 +1,13 @@
-style=""
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+上面是外部CSS.圖標的聯結↑
+
 background-color 背景顏色
 背景加圖片background: url('./images//0101.jpg');
+
 color 字體顏色	
 font-family 字體樣式	
 font-size 字體大小	
@@ -10,15 +17,20 @@ font-family 字體
 font-style 字體形式 italic斜體
 font-weight 粗細 bold粗體;
 letter-spacing 字元間距
+
 word-spacing 單詞間距
 white-space:normal  空白區域
 text-decoration:  overline;上線   underline;底線   line-through;刪除線
-
-overflow:hidde 超出框後文字不顯示
+word-break 超出儲存格就換行
 
 colspan 直
 rowspan 橫
+border-collapse 表格欄位邊框合併
+overflow:hidde 超出框後文字不顯示
 
+----------------------------------------------------------------
+
+排列
 Flex 外容器屬性↓
 display
 flex-flow
@@ -36,7 +48,7 @@ order
 align-self
 flexbox
 
-
+外部
 display:none  不顯示
 display:block  區塊元素，會佔一行(換行)
 display:inline-block  行內區塊 (圖片或文字均不換)
@@ -56,12 +68,7 @@ space-between 均分到底
 space-around 內均分
 space-evenly 內外均分
 
----------------------------------
-
-align-self
-
-
-
+內部
 flex-direction
 內容元素的「排列方向」
 1.row:預設值，左右，上下
@@ -100,7 +107,13 @@ flex-wrap
 nowrap單行預設 wrap多行
 wrap-reverse多行內容反轉
 
-line-height 行高
+自動計算
+calc 
+width: calc(100%/3);
+----------------------------------------------------------------
+
+行高
+line-height
 line-height:normal  行高依照(元素設定文字大小 x 1.2)* 作依據
  p：12(px) x 1.2 =14.4(px)
  line-height:180% 行高依照(父元素文字大小 x 180%)作依據 
@@ -109,7 +122,9 @@ line-height:normal  行高依照(元素設定文字大小 x 1.2)* 作依據
   line-height:18px  不管字型大小，你設定行高是 18px
 行高等於高度的話,則文字會垂直居中
 
+----------------------------------------------------------------
 
+超聯結
 text-decoration 消除超聯結底線
 吃外部Css檔 <link rel="stylesheet" href="./css/external.css">
 
@@ -122,10 +137,12 @@ a:active{color:blue;font-size:200%;}
 a:visited{color:green;font-size:250%;}
 /* 已聯結後 font-size不支援 */
 
+----------------------------------------------------------------
+
+位置
 position: relative; 相對位置
 position: absolute; 絕對位置
 position: fixed; 固定位置
-
 
 body>*{border:4px solid lightgray;}  body全加線
 body>*:not(aside,section){border:4px solid lightgray;} 除aside,section不加
@@ -141,15 +158,9 @@ overflow:hidden;自動隱藏超出
 overflow:scroll;自動產生捲軸
 overflow:inherit;繼承父元素的可見性
 
-.item-list
-
 -----------------------------------------------
 
-width: calc(100%/3);
-
-
------------------------------------------------
-
+常見問題
 1. 使用 class 和 id 對應 CSS 樣式
 　　在網頁的 head 標籤中加入以下敘述 定義樣式：
 　　<style type="text/css">
@@ -202,7 +213,3 @@ width: calc(100%/3);
 ◎ 顯示 display: block;　　隱藏 display: none;
 ◎ 避免元素(例如 div)造成換行： display: inline;
 ◎ 去除 iOS 按鈕預設的圓角與漸層　-webkit-appearance:none;
-
-
-文字
-word-break 超出儲存格就換行

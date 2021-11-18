@@ -1,0 +1,43 @@
+table, td, th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px;
+}
+
+.div3 {
+  display: flex;
+  justify-content: center;
+}
+
+.div1::before {
+  content: "div::before開頭";
+  color: red;
+}
+
+.div2::after {
+  content: "結尾div::after";
+  color: red;
+}
+
+a::before {
+  content: attr(href);
+  color: red;
+}
+
+a::after {
+  content: attr(target);
+  color: green;
+}
+
+.a2::before {
+  content: "( "attr(href) " ) < ";
+  color: red;
+}
+
+.a2::after {
+  content: " > ( "attr(target) " ) ";
+  color: green;
+}

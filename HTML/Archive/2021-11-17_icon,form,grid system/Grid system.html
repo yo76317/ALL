@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="row bg-dark text-white p-5">
+        <h2>Grid system、網格系統:</h2>
+        <p>平均12格，下面四個div都佔6格<br>
+            設 col-md-6 代表佔6行<br>
+            col-md 代表md的範圍時>=768px<br>
+            就會從原本6行:6行=12行，變成全部都單行=12行</p>
+        <div class="col-md-6 ">
+            <h1>只要記</h1>
+        </div>
+        <div class="col-md-6">
+            <h1>container</h1>
+        </div>
+        <div class="col-md-6">
+            <h1>row</h1>
+        </div>
+        <div class="col-md-6">
+            <h1>col</h1>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 class="p-5">簡易說明grid system 網格系統 col-X-X</h2>
+    <p class="p-5">1.2行是col-md-3，加了size。3.4行沒加，所以當螢幕尺寸低於768，1.2行會自動變為單行。3.4行不變 </p>
+    <div class="row p-5">
+        <div class="col-md-3 ">
+            <h1> col-md-3 </h1>
+        </div>
+        <div class="col-md-3 ">
+            <h1> col-md-3 </h1>
+        </div>
+        <div class="col-md-3 ">
+            <h1> col-md-3 </h1>
+        </div>
+        <div class="col-md-3">
+            <h1> col-md-3 </h1>
+        </div>
+    </div>
+
+    <div class="row p-5">
+        <div class="col-md-6 ">
+            <h1> col-md-6 </h1>
+        </div>
+        <div class="col-md-6 ">
+            <h1> col-md-6 </h1>
+        </div>
+        <div class="col-md-6 ">
+            <h1> col-md-6 </h1>
+        </div>
+        <div class="col-md-6 ">
+            <h1> col-md-6 </h1>
+        </div>
+    </div>
+
+    <div class="row p-5">
+        <div class="col-3 ">
+            <h1> col-3 </h1>
+        </div>
+        <div class="col-3 ">
+            <h1> col-3 </h1>
+        </div>
+        <div class="col-3 ">
+            <h1> col-3 </h1>
+        </div>
+        <div class="col-3 ">
+            <h1> col-3 </h1>
+        </div>
+
+        <div class="row">
+            <div class="col-6 ">
+                <h1> col-6 </h1>
+            </div>
+            <div class="col-6 ">
+                <h1> col-6 </h1>
+            </div>
+            <div class="col-6 ">
+                <h1> col-6 </h1>
+            </div>
+            <div class="col-6 ">
+                <h1> col-6 </h1>
+            </div>
+
+            <hr>
+
+            <div style="border:1px solid black" class="row p-5">
+                <div style="border:1px solid black" class="col-md-4">col-md-4</div>
+                <div style="border:1px solid black" class="col-md-8">col-md-8</div>
+                <p>這是左4右8-分割</p>
+
+                <div style="margin-top: 30px;">
+                    <div style="border:1px solid black" class="row p-5">
+                        <div style="border:1px solid black" class="col-md-3">col-md-3</div>
+                        <div style="border:1px solid black" class="col-md-3">col-md-3</div>
+                        <div style="border:1px solid black" class="col-md-6">col-md-6</div>
+                        <p>這是左3中3右6-分割</p>
+                    </div>
+                </div>
+            </div>
+
+                <hr>
+
+                    <div class="container px-4">
+                        <div class="row gx-5">
+                            <div class="col">
+                                <div class="p-3 border bg-light">水平 gutters</div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 border bg-light">水平 gutters</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="container overflow-hidden">
+                    <div class="row gy-5">
+                      <div class="col-6">
+                        <div class="p-3 border bg-light">垂直 gutters</div>
+                      </div>
+                      <div class="col-6">
+                        <div class="p-3 border bg-light">垂直 gutters</div>
+                      </div>
+                      <div class="col-6">
+                        <div class="p-3 border bg-light">垂直 gutters</div>
+                      </div>
+                      <div class="col-6">
+                        <div class="p-3 border bg-light">垂直 gutters</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="container">
+                    <div class="row g-5">
+                      <div class="col-6">
+                        <div class="p-3 border bg-light">水平及垂直 gutters</div>
+                      </div>
+                      <div class="col-6">
+                        <div class="p-3 border bg-light">水平及垂直 gutters</div>
+                      </div>
+                      <div class="col-6">
+                        <div class="p-3 border bg-light">水平及垂直 gutters</div>
+                      </div>
+                      <div class="col-6">
+                        <div class="p-3 border bg-light">水平及垂直 gutters</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="container">
+                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                      <div class="col">
+                        <div class="p-3 border bg-light">行列式 gutters</div>
+                      </div>
+                      <div class="col">
+                        <div class="p-3 border bg-light">行列式 gutters</div>
+                      </div>
+                      <div class="col">
+                        <div class="p-3 border bg-light">行列式 gutters</div>
+                      </div>
+                      <div class="col">
+                        <div class="p-3 border bg-light">行列式 gutters</div>
+                      </div>
+                      <div class="col">
+                        <div class="p-3 border bg-light">行列式 gutters</div>
+                      </div>
+                      <div class="col">
+                        <div class="p-3 border bg-light">行列式 gutters</div>
+                      </div>
+                      <div class="col">
+                        <div class="p-3 border bg-light">行列式 gutters</div>
+                      </div>
+                      <div class="col">
+                        <div class="p-3 border bg-light">行列式 gutters</div>
+                      </div>
+                      <div class="col">
+                        <div class="p-3 border bg-light">行列式 gutters</div>
+                      </div>
+                      <div class="col">
+                        <div class="p-3 border bg-light">行列式 gutters</div>
+                      </div>
+                    </div>
+                  </div>
+
+</body>
+
+</html>

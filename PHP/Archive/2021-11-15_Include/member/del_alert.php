@@ -20,8 +20,8 @@ div{width:200px;display:flex;
 <body>
     <h1>你確定要刪除<?=$_SESSION['user'];?>的所有資料嗎?</h1>
 
-    <div">
-    <a href="./api/del_user.php">
+    <div>
+    <a href="./api/api_del_user.php">
       <button>確定刪除</button>
     </a>
 

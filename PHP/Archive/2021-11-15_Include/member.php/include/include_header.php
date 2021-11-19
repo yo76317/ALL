@@ -1,3 +1,0 @@
-<header>
-    slide bar
-</header>

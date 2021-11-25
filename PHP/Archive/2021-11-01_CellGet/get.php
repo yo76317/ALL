@@ -8,17 +8,17 @@
 </head>
 <body>
     <?php
-   //     $book=$_GET['book']
-        // echo "<span>";
-        // echo $book;
-        // echo "</span>";
-    
-        <?php
-        $book=$_GET['book']
-        if($book == '書本1'){
+       $book=$_GET['book'];
         echo "<span>";
-        echo "</span>";
         echo $book;
+        echo "</span>";
+    
+ 
+        // $book=$_GET['book'];
+        // if($book == '書本1'){
+        // echo "<span>";
+        // echo "</span>";
+        // echo $book;
 
 
     

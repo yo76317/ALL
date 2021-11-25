@@ -1,5 +1,26 @@
+資料庫連線-要多打且熟記
 $dsn="mysql:host=localhost;charset=utf8;dbname=member";
 $pdo=new PDO($dsn,'root','');
+
+
+echo "<pre>"; 保持原樣輸出
+
+
+array_key_exists() 函數判斷某個數組中是否存在指定的key，如果該key 存在，則返回true，否則返回false。
+array_key_exists(key,array)
+參數	描述
+key	必需。規定鍵名。
+array	必需。規定輸入的數組。
+
+
+
+PHP strtotime 函數基本語法
+int strtotime ( string $time , int $now = time() )
+
+floor 無條件四捨五入
+
+w 秒
+N 星期幾、數字表示 1~7
 
 var_dump 印出變數所有數值
 

@@ -1,10 +1,18 @@
+外部CSS:
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+以下三個分別為 jquery,popper,bootstrap
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+組合
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-上面是外部CSS.圖標的聯結↑
 
+background-position 背景圖初始位置
 background-color 背景顏色
 背景加圖片background: url('./images//0101.jpg');
 
@@ -28,6 +36,8 @@ rowspan 橫
 border-collapse 表格欄位邊框合併
 overflow:hidde 超出框後文字不顯示
 
+指定控制
+p:nth-child(2) {}
 ----------------------------------------------------------------
 
 排列
@@ -125,7 +135,7 @@ line-height:normal  行高依照(元素設定文字大小 x 1.2)* 作依據
 ----------------------------------------------------------------
 
 超聯結
-text-decoration 消除超聯結底線
+text-decoration 修飾線條 消除超聯結底線
 吃外部Css檔 <link rel="stylesheet" href="./css/external.css">
 
 a:link{color:red;text-decoration: none;}

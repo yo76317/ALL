@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrapImg</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+body{margin:30px;}
+
+img{width:300px;
+height:300px;}
+
+.div1{margin-top:350px;}
+</style>
+</head>
+<body>
+<h1>這邊是都放在img內的</h1>
+
+<hr>
+<div>
+    <h4> img src="..." alt="..." class="img-fluid" </h4>
+    <p>Responsive響應式圖片- img-fluid.<br>max-width:100%<br>height:auto<br>以便它與父元素一起縮放。</p>
+    <img src="https://i.picsum.photos/id/1019/5472/3648.jpg?hmac=2mFzeV1mPbDvR0WmuOWSiW61mf9DDEVPDL0RVvg1HPs" alt="" class="img-fluid"> 
+</div>
+    
+<hr>
+
+<div>
+<h4> img src="..." alt="..." class="img-thumbnail" </h4>
+<p>thumbnails圖片會跟著放大縮小 img-thumbnail </p>
+<img src="https://i.picsum.photos/id/1011/5472/3648.jpg?hmac=Koo9845x2akkVzVFX3xxAc9BCkeGYA9VRVfLE4f0Zzk" alt="" class="img-thumbnail">  
+</div>
+
+<hr>
+
+<div>
+<h4>img src="..."  alt="..." class="rounded float-left" (&&float-right)</h4>
+    <p>Aligning對齊圖像 rounded float-left 跟 rounded float-right</p>
+    <h2><img src="https://i.picsum.photos/id/0/5616/3744.jpg?hmac=3GAAioiQziMGEtLbfrdbcoenXoWAW-zlyEAMkfEdBzQ" alt="" class="float-left">
+  
+    <h2><img src="https://i.picsum.photos/id/1/5616/3744.jpg?hmac=kKHwwU8s46oNettHKwJ24qOlIAsWN9d2TtsXDoCWWsQ" alt="" class="float-right"> 
+</div>
+
+<div class="div1">
+<hr>
+<h4>img src="..."  alt="..." class="mx-auto d-block"</h4>
+<p>對齊圖像 class="mx-auto d-block" </p>
+<img src="https://i.picsum.photos/id/1014/6016/4000.jpg?hmac=yMXsznFliL_Y2E2M-qZEsOZE1micNu8TwgNlHj7kzs8" alt="" class="mx-auto ">  
+</div>
+
+<hr>
+
+<div>
+    <h4>img src="..." class="mx-auto d-block" alt="..."</h4>
+    <p>使用mx-auto 置中(吃display的寬度) display-block佔滿整行(換行) class="mx-auto" mx=margin (left+right) d-block=display-block </p>
+    <img src="https://i.picsum.photos/id/1008/5616/3744.jpg?hmac=906z84ml4jhqPMsm4ObF9aZhCRC-t2S_Sy0RLvYWZwY" alt="" class="mx-auto d-block">  
+</div>
+
+<hr>
+
+<div>
+    <h4>img src="..." class="mx-auto d-block" alt="..."</h4>
+    <p>display-inline 在文內所以不換行 兩張圖片 d-inline = display-inline </p>
+    <img src="https://i.picsum.photos/id/1020/4288/2848.jpg?hmac=Jo3ofatg0fee3HGOliAIIkcg4KGXC8UOTO1dm5qIIPc" alt="" class="d-inline">
+    <img src="https://i.picsum.photos/id/1020/4288/2848.jpg?hmac=Jo3ofatg0fee3HGOliAIIkcg4KGXC8UOTO1dm5qIIPc" alt="" class="d-inline">
+</div>
+
+<hr>
+
+<div>
+    <h4>img src="cinqueterre.jpg" alt="" class="rounded"</h4>
+    <p>rounded圓角 照片四角會修圓邊</p>
+    <img src="https://i.picsum.photos/id/1004/5616/3744.jpg?hmac=Or7EJnz-ky5bsKa9_frdDcDCR9VhCP8kMnbZV6-WOrY" alt="" class="rounded">  
+</div>
+
+<hr>
+
+<div>
+    <h4>img src="cinqueterre.jpg" class="rounded-circle" alt="Cinque Terre"</h4>
+    <p>rounded-circle圓圈 照片變圓圈</p>
+    <img src="https://i.picsum.photos/id/1003/1181/1772.jpg?hmac=oN9fHMXiqe9Zq2RM6XT-RVZkojgPnECWwyEF1RvvTZk" alt="" class="rounded-circle">  
+</div>
+
+<hr>
+
+<div>
+    <h4>class="float-none" 浮動圖片-預設</h4>
+    <img src="../../img/mumu02.jpg" alt="" class="float-none"> 
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius nobis ullam est. Laboriosam quos consequuntur nam, magni expedita rerum nulla.</p>
+</div>
+
+<div>
+    <hr>
+    <h4>class="float-left" 浮動圖片-左</h4>
+    <img src="../../img/mumu02.jpg" alt="" class="float-left"> 
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius nobis ullam est. Laboriosam quos consequuntur nam, magni expedita rerum nulla.</p>
+</div>
+
+<div class="div1">
+    <hr>
+    <h4>class="float-right" 浮動圖片-右</h4>
+    <img src="../../img/mumu02.jpg" alt="" class="float-right"> 
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius nobis ullam est. Laboriosam quos consequuntur nam, magni expedita rerum nulla.</p>
+</div>
+
+
+
+
+</body>
+</html>

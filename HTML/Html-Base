@@ -10,6 +10,8 @@ div樣式化或方便腳本使用，用div
 header首頁  nav導覽列  main主內容 section標題區域(有主題) active(獨立性)
 aside側邊欄  footer頁尾  
 
+≥
+
 <ifram>
 超聯結
 _blank新窗口 _parent父框架 _top整個窗口
@@ -25,6 +27,24 @@ _blank新窗口 _parent父框架 _top整個窗口
 加圖片
 <img src="檔案位置" alt="替代文字">
 <img src="mumu01.jpg" alt="圖片檔遺失" width="200" height="200">
+
+插入圖片語法
+<img src="圖片網址">
+
+圖片加上連結語法
+<a href="連結前往的網址"><img src="圖片網址"></a>
+
+
+圖片加上寬度與高度的限制
+<a href="連結前往的網址"><img src="圖片網址" width="200" height="100"></a>
+
+
+在這個範例中我們加入了寬度 200 與高度 100 的規格設定，在 HTML 中這樣的寫法就可以，但是若使用 CSS 語法則必須加上寬度與高度的單位，才可以順利呈現唷！
+
+圖片加入連結後的邊框處理
+<a href="連結前往的網址"><img src="圖片網址" border="0"></a>
+
+
 
 
 

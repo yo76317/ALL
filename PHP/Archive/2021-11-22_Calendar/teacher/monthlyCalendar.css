@@ -1,0 +1,37 @@
+body{    background-color: lavender;
+    background-image: url('https://i.picsum.photos/id/549/300/300.jpg?grayscale&hmac=quXdzJ1k9CPHVjhUs-6j3Aqxldw2PiWacWVmalVk7IE');
+    background-size:cover;
+}
+
+.th1{text-shadow: 3.2px 8px 1.6px rgb(193, 231, 247),
+    -4.8px 1.6px 1.6px rgb(238, 16, 16),
+    2.8px -4.8px 1.6px rgb(158, 248, 178);    
+    text-align: center;
+    font-size: 40px;
+}
+.date2{text-align: center;
+    font-size: 30px;
+    color: burlywood;
+    margin:50px auto;
+    letter-spacing:30px;
+}
+
+table{
+width:500px;
+margin:auto;
+padding:20px;
+border:1px solid black;
+background-color:rgb(191, 240, 221);
+}
+td{
+padding:5px;
+text-align: center;
+border:1px solid black;
+}
+.dayoff{
+background-color:red;
+}
+.special{
+background-color:rgb(230, 241, 75);
+color:rgb(0, 0, 0);
+}

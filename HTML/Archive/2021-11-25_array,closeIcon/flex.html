@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .box{
+        width:100px;
+        height: 100px;
+        background-color: lightblue;
+        margin-top:10px;
+    
+    }
+</style>
+<body>
+    <div class="container-fluid">
+        <span class="box">1</span>
+        <span class="box d-block">2</span>
+        <span class="box d-inline-block">3</span>
+            <hr>
+        <div class="box">1</div>
+        <div class="box d-block">2</div>
+        <div class="box d-inline-block">3</div>
+            <hr>
+        <div class="d-flex">
+            <div class="box">d-flex</div>
+            <div class="box">1</div>
+            <div class="box">2</div>
+        </div>
+    </div>
+
+            <hr>
+
+<!-- d-flex 宣告以後 justify-content-start 決定X軸方向 -->
+    <div class="container-fluid">
+        <div class="d-flex justify-content-start">
+            <div class="box text-white">d-flex justify-content-start</div>
+            <div class="box text-white">1</div>
+            <div class="box text-white">2</div>
+        </div>
+
+        <hr>
+<!-- d-flex 宣告以後 justify-content-start 決定X軸方向 -->
+        <div class="d-flex justify-content-end">
+            <div class="box text-white">d-flex justify-content-end</div>
+            <div class="box text-white">2</div>
+            <div class="box text-white">3</div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

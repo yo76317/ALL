@@ -1,6 +1,6 @@
 <b>粗體 <i>斜體 <em>斜體權重 <strong>權重 <mark> - 標記文本
 <small>較小字 <del>刪除線 <ins>插入文本(下底線) <sup>上標文字 <sub>下標文字
-<span>不換行段落 <&nbsp>空白鍵空格 <&emsp>全形空格中文字寬 <= &gt; >=&lt;  <>&lt;&gt;
+<span>不換行段落 <&nbsp>空白鍵空格 <&emsp>全形空格中文字寬 <= &gt; >=&lt;  <>&lt;&gt; ≥
 
 aside側邊欄位
 article獨立的、自包含的內容
@@ -10,9 +10,13 @@ div樣式化或方便腳本使用，用div
 header首頁  nav導覽列  main主內容 section標題區域(有主題) active(獨立性)
 aside側邊欄  footer頁尾  
 
-≥
 
-<ifram>
+
+排版
+有序清單<ol> <li> , 無序清單<ul> </li>
+<ifram>網頁中再嵌套一個網頁 又叫做行內框架
+
+
 超聯結
 _blank新窗口 _parent父框架 _top整個窗口
 <a href="網址"></a>  
@@ -70,7 +74,7 @@ rowspan 橫
 <input type="text" placeholder="placeholder提醒灰色">
 <input type="password" placeholder="type=password密碼變*號">
 
-有序清單<ol> <li>         無序清單
+有序清單<ol> <li>         無序清單<ul> </li>
 <ol>                     <ul>
     <li>第1個</li>       <li>第1個</li>
     <li>第2個</li>       <li>第2個</li>

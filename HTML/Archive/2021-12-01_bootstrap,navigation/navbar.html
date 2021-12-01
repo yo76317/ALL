@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+  <h2>基本款</h2>
+  <p>active 顯示黑色<br>
+    基礎的 .nav 組件不包含任何 .active 狀態<br>
+    ul li 無序</p>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+
+  <h2>基本款-用.nav自動排列(預設display: flex)</h2>
+  <nav class="nav">
+    <a class="nav-link active" href="#">Active</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  </nav>
+
+<hr>
+
+  <h3>使用 .justify-content-center 水平對齊</h3>
+  <p>.justify-content-end 靠右對齊<br>
+    .justify-content-start 靠左對齊<br>
+    水平導覽可以不用ul li</p>
+
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>
+
+  <hr>  
+
+
+  <h3>使用 .flex-column 垂直對齊</h3>
+  <p>.justify-content-end 靠右對齊<br>
+    .justify-content-start 靠左對齊<br>
+    垂直導覽也是可以不用ul li<br>
+    特定視窗需要堆疊，可用響應式（例 .flex-sm-column）</p>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+
+    <hr>
+
+    <h2>選項改成方塊狀 .nav-pills</h2>
+    <p>pills 藥丸</p>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    
+    <hr>
+
+    <h2>.nav-fill</h2>
+    <p>.nav-fill 會將 .nav-item 內容按照比例分配空間。佔用所有的水平空間，但每個導覽寬度都不同</p>
+    <ul class="nav nav-fill">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Longer nav link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+
+    <hr>
+
+    <h2>改成nav自動排列 .nav-pills</h2>
+    <p>確保在連結上包含 .nav-item</p>
+    <nav class="nav nav-fill">
+      <a class="nav-item nav-link active" href="#">Active</a>
+      <a class="nav-item nav-link" href="#">Link</a>
+      <a class="nav-item nav-link" href="#">Link</a>
+      <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </nav>
+
+    <hr>
+
+    <h2>等寬元素 .nav-justified</h2>
+    <p>水平空間被導覽連結佔據，每個導覽項都將是相同的寬度</p>
+    <nav class="nav nav-justified">
+      <a class="nav-link active" href="#">Active</a>
+      <a class="nav-link" href="#">Longer nav link</a>
+      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </nav>
+    
+    <hr>
+
+    <h2>改成nav自動排列 .nav-justified</h2>
+    <p>確保在連結上包含 .nav-item</p>
+    <nav class="nav nav-justified">
+      <a class="nav-item nav-link active" href="#">Active</a>
+      <a class="nav-item nav-link" href="#">Link</a>
+      <a class="nav-item nav-link" href="#">Link</a>
+      <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </nav>
+
+    <hr>
+
+    <h2>.nav-tabs頁籤  dropdown</h2>
+    <p>nav-tabs頁籤</p>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+
+    <hr>
+
+    <h2>基本款</h2>
+  <p>active 顯示黑色<br>
+    基礎的 .nav 組件不包含任何 .active 狀態<br>
+    ul li 無序</p>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

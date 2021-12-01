@@ -25,6 +25,7 @@ font-family 字體
 font-style 字體形式 italic斜體
 font-weight 粗細 bold粗體;
 letter-spacing 字元間距
+title  指定提示文字
 
 word-spacing 單詞間距
 white-space:normal  空白區域

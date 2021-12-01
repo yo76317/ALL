@@ -16,3 +16,9 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
 class="list-unstyled"  消除<ul>前的標示
 
 class="container-fluid" 佔整行
+
+justify-content-start：靠左對齊(預設)
+justify-content-center：置中對齊
+justify-content-end：靠右對齊
+justify-content-around：分散對齊(含左右)
+justify-content-between：分散對齊(不含左右)

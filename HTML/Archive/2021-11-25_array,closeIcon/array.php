@@ -138,7 +138,7 @@ YO($name1);
 <hr>
 
 
-<h2>二維-改key且帶值，應用度高</h2>
+<h2>二維-改key且帶值，foreach迴圈應用</h2>
     <p>平常用兩個陣列才能取兩值，二維變成只要一個陣列就能取雙值<br> 
       < ?php<br>
       $car = <br>
@@ -202,9 +202,34 @@ YO($car);
     <p>    
     </p>
     <?php
-$eat=['id'=>'apple']
+$eat= [
+      ['id'=>'apple','quantity'=>"1"],
+      ['id'=>'banana','quantity'=>"2"],
+      ['id'=>'tomato','quantity'=>"3"]
+];
+print_r($eat);
+echo "<br>";
+echo $eat[0]['id'];
+echo "<br>";
+echo $eat[0]['id'].$eat[2]['quantity'];   
+echo "<pre>";
+print_r($eat);
+echo "</pre>";  
+foreach ($eat as $key0=>$value9){
+echo 
+
+
+}
     ?>
 
 
+<hr>
+
+
+<h2></h2>
+    <p>    
+    </p>
+    <?php
+    ?>
 </body>
 </html>

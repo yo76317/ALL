@@ -1,4 +1,10 @@
-<h1>列出的投票問題列表</h1>
+<h1>列出的投票問題列表
+    <!-- button class可以放到 a標籤內 -->
+    <a href="?do=add_subject_form">
+        <button class="btn btn-primary rounded btn-sm">新增問卷</button>
+    </a>
+</h1>
+
 <?php
 $subjects=all('topics');
 
@@ -15,8 +21,8 @@ echo "</a>";
 //管理題目
 
 echo "<a href='?do=edit_subject&id={$value['id']}' class='d-inline-block col-md-1 text-center'>";
-    echo "<button class='btn btn-info'>管理</button>";
-    echo "</a>";
+echo "<button class='btn btn-info'>管理</button>";
+echo "</a>";
 
 //投票總數
 $count=q("select sum(`count`) as '總計' from `options` where `topic_id`='{$value['id']}'");

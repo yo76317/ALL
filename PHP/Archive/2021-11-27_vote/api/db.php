@@ -1,9 +1,10 @@
 <?php
     $dsn="mysql:host=localhost;charset=utf8;dbname=yo76317";
     $pdo=new PDO($dsn,'root','');
+    SESSION_START(); //所有的api都吃的到
 
-    //取得符合條件的一筆資料
-    function find($table,$id){
+     //取得符合條件的一筆資料
+     function find($table,$id){
         global $pdo;
         $sql="SELECT * FROM `$table` WHERE ";
 
@@ -19,7 +20,6 @@
 
         return $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
     }
-
 
 
     //取出指定資料表的所有資料
@@ -67,7 +67,7 @@ function all($table,...$arg){
 
     mb_substr($sql_where,0,mb_strlen($sql_where)-5);
     $sql="UPDATE `$table` SET $sql_set WHERE $sql_where ";
-    echo $sql; . "<br>";
+    echo $sql . "<br>";
     $pdo->exec($sql);
 
  }

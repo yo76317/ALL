@@ -9,6 +9,10 @@ enctype="multipart/form-data"
 echo "<pre>"; 保持原樣輸出
 
 
+file上傳區
+enctype="multipart/form-data" 檔案傳輸,要多打且熟記
+
+
 array_key_exists() 函數判斷某個數組中是否存在指定的key，如果該key 存在，則返回true，否則返回false。
 array_key_exists(key,array)
 參數	描述

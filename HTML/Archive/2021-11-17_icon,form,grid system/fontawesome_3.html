@@ -1,70 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>基本資料表</title>
-    <link rel="stylesheet" href="./Css/basic_3.css">
-    <link rel="stylesheet" href="./Css/style_3.css">
-    <script src="https://kit.fontawesome.com/ab96302682.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>基本資料表</title>
+   <link rel="stylesheet" href="./Css/basic_3.css">
+   <link rel="stylesheet" href="./Css/style_3.css">
+   <script src="https://kit.fontawesome.com/ab96302682.js" crossorigin="anonymous"></script>
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
     integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
 </head>
+
 <body>
-    <div class="form-box">
-            <div class="form-header">
-                <h1 class="form-header-title"><i class="far fa-address-card"></i>基本資料表</h1>
-            </div>
+   <div class="form-box">
+           <div class="form-header">
+               <h1 class="form-header-title">
+                   <i class="far fa-address-card"></i>基本資料表
+               </h1>
+           </div>
+       <!-- 表格主體 -->
+     <form action="?" class="form-body" mothod="get"> 
+        <div class="form-group">
+           <label for="username"><i class="fas fa-signature">姓名:</i></label>
+           <input type="text" name="username" id="username">
+        </div>
+   
+        <!-- for跟id 取一樣，是為了 label跟input 關聯 -->
+        <div class="form-group">
+           <label for="gender1"><i class="fas fa-venus-mars">性別:</i>男</label>
+           <input type="radio" id="gender1" name="gender" value="male">
+           <label for="gender2">女</label>
+           <input type="radio" id="gender2" name="gender" value="Female" >
+        </div>
+   
+        <!-- 設定最小日期1900-01-01到最大2022-01-01 -->
+        <div class="form-group">
+           <label for="birthday"><i class="fas fa-birthday-cake">生日:</i></label>
+           <input type="date" id="birthday" name="birthday" min="1900-01-01" max="2022-01-01">
+        </div>
+   
+        <!-- 下拉三部曲s o o 傳值value-->
+        <div class="form-group">
+           <label for="building"><i class="far fa-building">部門:</i></label>
+           <select id="building" name="building">
+               <optgroup label="A分類">
+               <option selected value="A1-1">門市</option>
+               <option selected value="A1-2">店長</option>
+               </optgroup> 
+               <optgroup label="B分類">
+               <option value="B1-1">主管</option>
+               <option value="B1-2">人資</option>
+               </optgroup> 
+           </select>
+        </div>
+   
+        <!-- checkbox -->
+        <div class="form-group">
+              <label for="A2"><i class="fas fa-briefcase"></i>專長:</i></label>
+              <input type="checkbox" id="A2" name="A2">
+              <label for="A2">人員管理</label>
+              <input type="checkbox" id="B2" name="B2">
+              <label for="B2">門市管理</label>
+              <input type="checkbox" id="C2" name="C2">
+              <label for="C2">進貨退貨維護</label>
+              <input type="checkbox" id="D2" name="D2">
+              <label for="D2">銷售</label>
+        </div>
 
-      <form action class="form-body">
-         <div class="form-group">
-            <label for="username"><i class="fas fa-signature">姓名:</i></label>
-            <input type="username" name="username" id="username">
-         </div>
-    
-         <div class="form-group">
-            
-            <label for="A"><i class="fas fa-venus-mars">性別:</i>男</label>
-            <input type="radio" id="gender" name="gender">
-            <label for="B">女</label>
-            <input type="radio" id="gender" name="gender">
-         </div>
-    
-         <div class="form-group">
-            
-            <label for="birthday"><i class="fas fa-birthday-cake">生日:</i></label>
-            <input type="date" name="birthday" id="birthday" min="1900-01-01" max="2022-01-01">
-         </div>
-    
-         <div class="form-group">
-            <label for="building"><i class="far fa-building"></i>部門:</i</label>
-            <select id="building" name="building">
-                <option value="A">門市</option>
-                <option value="B">店長</option>
-                <option value="C">主管</option>
-                <option value="C">人資</option>
-            </select>
-         </div>
-    
-         <div class="form-group">
-            <i class="fab fa-buromobelexperte">專長:</i>
-               <input type="checkbox" id="a" name="a">
-               <label for="A">飛高高</label>
-               <input type="checkbox" id="b" name="b">
-               <label for="B">程式語言</label>
-               <input type="checkbox" id="c" name="c">
-               <label for="C">中樂透</label><br>
-         </div>
-    
-         <div class="form-group">
-            <button class="submit-btn" typ="submit">送出</button>
-            <button class="submit-btn" typ="result">重新輸入</button>
-         </div>
-      </form>
-    </div>
+        <!-- 單選所以加 name 傳值用value -->
+        <div class="form-group">
+           <label for="A3"><i class="fas fa-arrows-alt"></i>去向:</i></label>
+           <input type="radio" id="A3" name="go" value="A3">
+           <label for="A3">就職</label>
+           <input type="radio" id="B3" name="go" value="B3">
+           <label for="B3">調職</label>
+           <input type="radio" id="C3" name="go" value="C3">
+           <label for="C3">離職</label>
+           <input type="radio" id="D3" name="go" value="D3">
+           <label for="D3">留職停薪</label>
+        </div>
+   
+        <div class="form-group">
+           <button class="submit-btn" typ="submit">送出</button>
+           <button class="submit-btn" typ="result">重新輸入</button>
+        </div>
+     </form>
+   </div>
 
+   <script src="https://kit.fontawesome.com/ab96302682.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <form action="?">
+        <div class="container mt-3">
+            <h2>Modal Example</h2>
+
+            <!-- Button to Open the Modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                Open modal
+            </button>
+
+            <!-- The Modal -->
+            <!-- face 淡入淡出 -->
+            <div class="modal fade" id="myModal" data-backdrop="static">
+                <!-- 尺寸 modal-xl -->
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Modal Heading</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <!-- 背景色 -->
+                        <div class="modal-body bg-info">
+                            <div class="container">
+
+                                <div class="rol">
+                                    <div class="col">
+                                        <h2>Stacked form</h2>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-1">
+                                        <label for="email">Email:</label>
+                                    </div>
+                                    <div class="col-5">
+                                        <input type="email" class="form-control" id="email" name="email">
+                                    </div>
+
+                                    <div class="col-1">
+                                        <label for="email">Email:</label>
+                                    </div>
+                                    <div class="col-5">
+                                        <input type="email" class="form-control" id="email" name="email">
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-1">
+                                        <label for="email">Email:</label>
+                                    </div>
+                                    <div class="col-5">
+                                        <input type="email" class="form-control" id="email" name="email">
+                                    </div>
+
+                                    <div class="col-1">
+                                        <label for="email">Email:</label>
+                                    </div>
+                                    <div class="col-5">
+                                        <input type="email" class="form-control" id="email" name="email">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

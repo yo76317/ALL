@@ -68,7 +68,14 @@ rowspan 橫
 <input type="radio" id="" name="">
 多選表單checkbox
 <input type="checkbox" id="" name="">
-下拉選單cars
+下拉選單 <select>、<option>、<optgroup>
+<select id="myAddress" name="myAddress">
+    <optgroup label="彰化縣">
+        <option selected>彰化市</option>
+        <option>花壇鄉</option>
+    </optgroup>
+</select>
+
 <label for="cars"></label>
     <select id="" name="">
 <input type="text" placeholder="placeholder提醒灰色">

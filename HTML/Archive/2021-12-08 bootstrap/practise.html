@@ -9,7 +9,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <style>
+body{margin:10px;}
+.center1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.mb1{margin-bottom: 10px;}
     </style>
 </head>
 
@@ -18,8 +25,8 @@
     <!-- table -->
     <div class="container">
 
-        <div class="rol bg-info">
-            <div class="col-12">
+        <div class="rol bg-info ">
+            <div class="col center1">
                 <h2>Table / Modal</h2>
             </div>
         </div>
@@ -27,9 +34,11 @@
 
         <!-- modal start -->
         <form action="?">
-            <button type="button" class="btn btn-primary" id="myBtn">
-                add
-            </button>
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-primary " id="myBtn">
+                    add
+                </button>
+            </div>
 
             <div class="modal fade" id="myModal" data-backdrop="static">
                 <div class="modal-dialog modal-xl">

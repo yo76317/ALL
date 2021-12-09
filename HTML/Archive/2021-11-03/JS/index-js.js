@@ -6,7 +6,7 @@ const resu1 = document.getElementById("resu1");
 const presu = document.getElementById("resu2");
 
 form1.addEventListener("submit",function(e){  
-    // 讀取位置.addEventListener("什麼觸發",定義function函數(a));    語法 //
+    // 讀取位置.addEventListener("什麼觸發",定義function函數(e));    語法 //
     // console.log(e); 預防表單重新整理的預設行為
     e.preventDefault();
     // console.log("submit",e);

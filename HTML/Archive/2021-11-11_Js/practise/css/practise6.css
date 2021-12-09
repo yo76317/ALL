@@ -1,0 +1,9 @@
+header{
+    background-image:url('https://i.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI');
+    background-size:cover;
+    width:100%;
+    padding:70px;
+    color:white;
+    text-align: center;
+    text-shadow:1px 1px 1px black;   
+}

@@ -22,7 +22,7 @@ const form = document.getElementById('myForm');
 const num1 = document.getElementById('num1');
 const num2 = document.getElementById('num2');
 const option = document.getElementById('option');
-
+const resultOutput = document.getElementById('resultOutput');
 
 // get form
 form.addEventListener("submit",function(e){
@@ -48,10 +48,21 @@ form.addEventListener("submit",function(e){
     console.log(typeof(option.value));
     switch(option.value){
         case "+" :
-            alert(parseIntNum1 + parseIntNum2);
+            total = parseIntNum1 + parseIntNum2;
+            alert(total);
+            resultOutput.innerText = "Result: " + total;
             break;
         case "-" :
-            alert(parseIntNum1 - parseIntNum2);
+            // 要正數的情況用,一個循環丟數字 O_O
+            // let tempNum;
+            // if (parseIntNum2 > parseIntNum1){
+            //     tempNum = parseIntNum1;
+            //     parseIntNum1 = parseIntNum2;
+            //     parseIntNum2 = tempNum;
+            // }
+            total = parseIntNum1 - parseIntNum2;
+            alert(total);
+            resultOutput.innerText = "Result: " + total;
             break;
         case "*" :
             alert(parseIntNum1 * parseIntNum2);
@@ -63,5 +74,7 @@ form.addEventListener("submit",function(e){
         default :
         alert("default");
         break;
+
+
     }
 });

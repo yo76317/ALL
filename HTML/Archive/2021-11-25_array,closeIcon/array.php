@@ -219,9 +219,9 @@ foreach ($eat as $key0=>$value9){
 echo 
 
 
-}
-    ?>
 
+    ?>
+{
 
 <hr>
 

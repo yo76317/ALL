@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+        margin: 50px;
+    }
+    .blackred {
+        font-size: 20px;
+        color: red;
+    }
+    .mt {
+        margin-top: 30px;
+    }
+</style>
+
+<body>
+    <div class="container" id=lastdivp>
+        <div class="row">
+            <div class="col-12">
+                <h3 id=h3>點擊事件</h3>
+                <div>
+                    <p id=p1>文字</p>
+                    <div>
+                        <input type="text" name="name" id=focusInput1>
+                    </div>
+                    <div>
+                        <input type="text" name="address" id=focusInput2>
+                    </div>
+                    <div>
+                        <input type="hidden" name="price" id=focusInput3>
+                    </div>
+                    <button type=submit id=submit1>submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container" id=lastdivp>
+        <div class="row">
+            <div class="col-12">
+                <h3>find & toggleClass 使用</h3>
+                <div class="col-12 mt">
+                    <h3>第一組</h3>
+                    <ol>
+                        <li>ol包li</li>
+                        <li>不用#id選擇器</li>
+                        <li>黑變紅,紅變黑</li>
+                        <li>find 返回(指定元素)後代中所有的(指定元素)</li>
+                        <li>toggleClass 對指定元素,添加Class切換效果</li>
+                        <button id="button_li">點擊變色</button>
+                    </ol>
+                </div>
+
+                <div class="col-12 mt">
+                    <h3>第二組</h3>
+                    <p>div包p</p>
+                    <p>黑變紅,紅變黑</p>
+                    <button id="button_p">點擊變色</button>
+                </div>
+
+                <div class="col-12 mt">
+                    <h3>第三組</h3>
+                    <ol>
+                        <li>這邊ol>li=span包</li>
+                        <span>find('ol').find('span') 指定ol下的span變色</span><br>
+                        <button id="button_lip">點擊變色</button>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container mt">
+        <div class="row">
+            <div class="col">
+                <button id="button_ish3">選擇h3</button>
+                <button id="button_isp">選擇p</button>
+                <button id="button_isspan">選擇span</button>
+                <button id="button_isol">選擇ol</button>
+                <button id="button_isli">選擇li</button>
+                <button id="button_isul">選擇ul</button>
+                <button id="button_ispp">選擇pp</button>
+                <button id="button_ispn">選擇pn</button>
+                <div>
+                    <h3 class="ish3">siblings 使用 - h3</h3>
+                    <p class="isp">返回被選元素的所有同級元素(兄姐) - p</p>
+                    <p>p (無class)</p>
+                    <p class="ispp">pp prev前一個同級元素</p>
+                    <p class="ispn">pn next後一個同級元素 (無class)</p>
+                    <p>p (無class)</p>
+                    <span class="isspan">行內span1</span>
+                    <span >行內span2 (無class)</span>
+                    
+                    <ol class="isol">這邊是ol包li - ol
+                        <li class="isli">我是li - li</li>
+                        <li >li (無class)</li>
+                    </ol>
+
+                    <ul class="isul">這邊是ul包li
+                        <li class="isli">我是li  - li</li>
+                        <li >li (無class)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            // 點擊事件 - red
+            $('#h3').on('click', function () {
+                $(this).css('color', 'yellow');
+                $(this).css('background-color', 'gray');
+                $(this).text('color & background-color 100');
+                $("#h3").val('100');
+                count = $('#h3').val();
+                if (!isNaN(count)) {
+                    discount();
+                }
+            });
+
+            // 移入black移出red文字
+            $('#p1').on('mouseenter', function () {
+                $('#p1').css('color', 'red');
+            });
+
+            $('#p1').on('mouseout', function () {
+                $('#p1').css('color', 'black');
+            });
+
+            // 對焦事件 input
+            $('#focusInput1,#focusInput2,#focusInput3').on('focus', function () {
+                $('#focusInput1,#focusInput2,#focusInput3').css('background-color', 'lightgray');
+            });
+            $('#focusInput1,#focusInput2,#focusInput3').blur('focus', function () {
+                $('#focusInput1,#focusInput2,#focusInput3').css('background-color', 'White');
+            });
+
+
+            // find & toggleClass 使用
+            // 第一組-指定li
+            $("#button_li").click(function () {
+                $('ol').find('li').toggleClass('blackred');
+            });
+
+            // 第二組-指定p
+            $("#button_p").click(function () {
+                $('div').find('p').toggleClass('blackred');
+            });
+
+            // 第三組-指定li+span
+            $("#button_lip").click(function () {
+                $('div').find('ol').find('span').toggleClass('blackred');
+            });
+
+
+            // siblings使用
+            $('#button_ish3').click(function(){
+                $('h3.ish3').siblings().css("background-color","yellow");
+            });
+            $('#button_isp').click(function(){
+                $('p.isp').siblings().css("background-color","yellow");
+            });
+            $('#button_isspan').click(function(){
+                $('span.isspan').siblings().css("background-color","yellow");
+            });
+            $('#button_isol').click(function(){
+                $('ol.isol').siblings().css("background-color","yellow");
+            });
+            $('#button_isli').click(function(){
+                $('li.isli').siblings().css("background-color","yellow");
+            });
+            $('#button_isul').click(function(){
+                $('ul.isul').siblings().css("background-color","yellow");
+            });
+            $('#button_ispp').click(function(){
+                $('p.ispp').prev().css("background-color","yellow");
+            });
+            $('#button_ispn').click(function(){
+                $('p.ispn').next().css("background-color","yellow");
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

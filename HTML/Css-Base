@@ -11,7 +11,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
+placeholder="123"
 background-position 背景圖初始位置
 background-color 背景顏色
 背景加圖片background: url('./images//0101.jpg');

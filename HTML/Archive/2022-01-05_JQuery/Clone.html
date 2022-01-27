@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+        margin: auto;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3>Clone使用</h3>
+                <div>
+                    <p class="p1">
+                        第一段
+                    </p>
+                    <p class="p1">
+                        最後一段
+                    </p>
+                    <button id="button_clone1">按下後複製 - 但每按一次會複製所有p元素</button>
+                </div>
+                <p id=p_clone1></p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p id=p_clone2>p</p>
+                <b id=b_clone2>複製元素</b>
+                <p id=p_clone3>p</p>
+                <button id="button_clone2">prependTo</button>
+                <button id="button_clone3">appendTo</button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <button id="button_clone4">animate</button>
+                <h3>animate - 安利美特 (動畫)</h3>
+                <p id=p_clone4>變大</p>
+                <hr id=hr1>
+            </div>
+            <div class="col-6">
+                <button id="button_clone5">animate</button>
+                <h3>animate - 安利美特 (動畫)</h3>
+                <p>(selector).animate({styles},speed,easing,callback)</p>
+                <p>(selector).animate({styles},動畫速度毫秒,不同點中元素速度默認swing跟linear,執行完後要執行的涵數)</p>
+                <p id=p_clone5>變大</p>
+                <p id=p_clone6>六</p>
+                <p id=p_clone7>七</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // 第一項
+            $("#button_clone1").on("click", function () {
+                $(".p1").clone().appendTo("#p_clone1");
+            });
+            // 第二項
+            $("#button_clone2").on("click", function () {
+                $("#b_clone2").clone().prependTo("#p_clone2");
+            });
+            $("#button_clone3").on("click", function () {
+                $("#b_clone2").clone().appendTo("#p_clone3");
+            });
+            // 第三項
+            $('#button_clone4').on('click',function(){
+                $('#p_clone4').clone(true).appendTo('#hr1')
+            })
+            $('#p_clone4').click(function(){
+                $(this).animate({fontSize:"+=5px"});
+            });
+            // 第四項
+            $('#p_clone5').click(function(){
+                $('#p_clone5').animate({fontSize:"+=5px"}); 
+            });
+
+
+
+
+        });
+         
+    </script>
+</body>
+</html>
+ <!-- <div class="container">
+        <div class="row">
+            <div class="col-">
+
+            </div>
+        </div>
+    </div> -->

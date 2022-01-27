@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <h1>jQuery no bootstrap</h1>
+        <p id="blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, in impedit aperiam blanditiis
+            fuga nihil eligendi velit rerum cum deleniti.</p>
+
+        <p id="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, in impedit aperiam blanditiis
+            fuga nihil eligendi velit rerum cum deleniti.</p>
+
+        <button id="hideBtn">hideBtn</button>
+        <button id="showBtn">showBtn</button>
+
+        <button id="toggleBtn">toggleBtn</button>
+    </ul>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        referrerpolicy="no-referrer"></script>
+
+    <script>
+        // const content = document.getElementById("content");
+        // content.style.color = "red";
+
+        $(document).ready(function () {
+            // $("#content").hide();
+            // 我希望這個按鈕 按下去 p 在執行
+            // $("button").click(function(){
+
+            // });
+            $("#blue").css('color',"blue");
+            $("#red").css('color',"red");
+
+            $("#hideBtn").click(function () {
+                //程式碼
+                $("#blue").hide();
+                $("#red").hide();
+            });
+
+            $("#showBtn").click(function () {
+                //程式碼
+                $("#blue").show();
+                $("#red").show();
+            });
+
+            $("p").click(function () {
+                //程式碼
+                $(this).hide();
+                // $this xxx
+                // $("this") xxx
+            });
+
+            $("#toggleBtn").click(function () {
+                //程式碼
+                $("#blue").toggle();
+                $("#red").toggle();
+            });
+
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

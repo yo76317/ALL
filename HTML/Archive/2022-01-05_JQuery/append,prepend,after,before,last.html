@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    .mt {
+        margin-top: 30px;}
+</style>
+
+<body>
+    <div class="container mt">
+        <div class="row">
+            <h3 class="col-12">append & prepend</h3>
+
+            <div class="col-12">
+                <p id=append1>append 在每個 p 元素裡面，後面插入內容=> </p>
+                <p id=append2>2</p>
+                <p id=append3>3</p>
+                <button id="append_but">append_but</button>
+                <button id="append_addClass">addClass</button>
+                <button id="append_remove">remove</button>
+                <button id="append_but_to">append_but_to</button>
+                <button id="append_but_h3">append_but_h3</button>
+            </div>
+
+            <div class="col-12 mt">
+                <p id="prepend1"> &lt;=prepend 在每個 p 元素裡面，前面插入內容</p>
+                <button id="prepend_but">prepend_but</button>
+                <button id="prepend_addClass">addClass</button>
+                <button id="prepend_remove">remove</button>
+            </div>
+
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <div class="orw">
+            <div class="col-12">
+                <h3>應用</h3>
+                <button id="append_ol">append ol</button>
+                <p>在 ol 標籤，使用append,加上li變成項目</p>
+                <ol id=ol1>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container" id=lastdivp>
+        <div class="orw">
+            <div class="col-12">
+                <h3>after,before使用</h3>
+                
+                <div class="col-12">
+                    <button id="after_but">after_but</button>
+                    <button id="after_addClass">addClass</button>
+                    <button id="after_remove">remove</button>
+                    <p id=after1>after 在每個 p 元素外面，後面插入內容=> </p>
+                </div>
+    
+                <div class="col-12">
+                    <button id="before_but">before_but</button>
+                    <button id="before_addClass">addClass</button>
+                    <button id="before_remove">remove</button>
+                    <p id="before1"> &lt;=before 在每個 p 元素外面，前面插入內容</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container" id=lastdivp>
+        <div class="orw">
+            <div class="col-12">
+                <h3>last()使用</h3>
+                <div style="border:1px solid black">
+                    <p>選取最後一個div元素內的最後一個p元素</p>
+                    <p>$("div p").last().css("background-color","yellow");</p>
+                </div>
+                <div style="border:1px solid black">
+                    <p>如果是要找最後一個Div就是</p>
+                    <p>$("div").last().css("background-color","yellow");</p>
+                </div>
+                <div style="border:1px solid black">
+                    <p>如果是指定id裡面尋找</p>
+                    <p>$('#指定id p').last().css("background-color","yellow");</p>
+                </div>
+                <p>div外的p</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // append 在每個 p 元素裡面，後面插入內容
+            $('#append_but').click(function () {
+                $('#append1').append("按下按鈕後，插入p元素結尾");
+            });
+            // appendTo 添加元素
+            $('#append_but_to').click(function () {
+                $("<p>添加p</p>").appendTo("#append1");
+               
+            });
+            // appendTo 選定元素後面，插入現有元素
+            $('#append_but_h3').click(function () {
+                $("#append2").appendTo("#append3");
+               
+            });
+
+            // addClass - 插Class
+            $('#append_addClass').click(function () {
+                $('#append1').addClass('text-danger');
+            });
+            //  remove - 移除Class
+            $('#append_remove').click(function () {
+                $('#append1').removeClass('text-danger');
+            });
+
+
+            // prepend 在每個 p 元素外面，前面插入內容
+            $('#prepend_but').click(function () {
+                $('#prepend1').prepend("按下按鈕後，插入P元素開頭");
+            });
+            // addClass - 插Class
+            $('#prepend_addClass').click(function () {
+                $('#prepend1').addClass('text-warning');
+            });
+            //  remove - 移除Class
+            $('#prepend_remove').click(function () {
+                $('#prepend1').removeClass('text-warning');
+            });          
+
+
+
+            // last 
+            $(document).ready(function () {
+                $('#lastdivp p').last().css("background-color", "yellow");
+            });
+
+
+
+            // after 在每個 p 元素外面，後面插入內容
+            $('#after_but').click(function () {
+                $('#after1').after("按下按鈕後，插入p元素結尾");
+            });
+            // addClass - 插Class
+            $('#after_addClass').click(function () {
+                $('#after1').addClass('text-danger');
+            });
+            //  remove - 移除Class
+            $('#after_remove').click(function () {
+                $('#after1').removeClass('text-danger');
+            });
+
+
+            // before 在每個 p 元素外面，前面插入內容
+            $('#before_but').click(function () {
+                $('#before1').before("按下按鈕後，插入P元素開頭");
+            });
+            // addClass - 插Class
+            $('#before_addClass').click(function () {
+                $('#before1').addClass('text-warning');
+            });
+            //  remove - 移除Class
+            $('#before_remove').click(function () {
+                $('#before1').removeClass('text-warning');
+            });
+
+
+            
+            // append 使用在ol
+            $('#append_ol').click(function () {
+                $('#ol1').append("<li></li>");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

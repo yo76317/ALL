@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>練習</h2>
+        <p id="mandarin" class="p1">中</p>
+        <p id="english" class="p1">英</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col" id="english">First</th>
+                    <th scope="col" id="english">Last</th>
+                    <th scope="col" id="english">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr class="tr2">
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr class="tr4">
+                    <th scope="row">4</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- button -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <button id="button_red">紅</button>
+                <button id="button_blue">藍</button>
+                <button type="reset" id="reset1">重置</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 先載入 -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/ab96302682.js" crossorigin="anonymous"></script>
+
+    <!-- JS start -->
+    <script>
+        jQuery(document).ready(function () {
+
+            // 紅色按鈕
+            jQuery("#button_red").click(function () {
+                // alert("red");
+                jQuery("#mandarin").show();
+                jQuery("#english").hide();
+                jQuery("#button_red").addClass("btn-danger");
+                jQuery("#button_blue").removeClass("btn-primary");
+                // jQuery("#mandarin").css('color', 'red');
+
+            });
+
+            jQuery("#button_blue").click(function () {
+                // alert("red");
+                jQuery("#english").show();
+                jQuery("#mandarin").hide();
+                jQuery("#button_blue").addClass("btn-primary");
+                jQuery("#button_red").removeClass("btn-danger");
+                
+                
+            });
+
+            $("#reset1").click(function(){
+                $("#mandarin").show();
+                $("#english").show();
+                jQuery("p1").css('color', 'black');
+                jQuery("#button_red").removeClass("btn-danger");
+                jQuery("#button_blue").removeClass("btn-primary");
+            })
+
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+Create, Retrieve, Update, Delete
+創建、檢索、更新、刪除
+CTEATE，INSERT 	SELECT UPDATE DELETE
+同一頁取兩次資料以上需要query
+簡寫
+$rows=$pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+return $rows;
+return $pdo->query($sql)->fetchAll();
+
+
+

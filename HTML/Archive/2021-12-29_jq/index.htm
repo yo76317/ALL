@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <h1>JQuery - 換色</h1>
+            <p>jq起頭 $ = JQuery <br>
+                id = # <br>
+            </p>
+
+            <p id="content1">content1 red </p>
+            <hr>
+            <p id="content2">content2 blue </p>
+            <hr>
+            <p id="content3">content3 click </p>
+            <hr>
+            <p id="content4">content4 show&hide class</p>
+            <button class="button_show" id="show1">show1</button>
+            <button class="button_hide" id="hide1">hide1</button>
+            <hr>
+            <p id="content5">content5 show&hide id</p>
+            <button id="show2">show2</button>
+            <button id="hide2">hide2</button>
+            <hr>
+            <p id="content6">content6 toggle id</p>
+            <button id="all1">toggle</button>
+            <hr>
+            <p id="content7">content7</p>
+            <button id=show3>show3(1000)</button>
+            <button id=hide3>hide3(1000)</button>
+            <hr>
+            <div>
+                <p>fadeIn</p>
+                <button id=show4>show4</button>
+                <button id=hide4>hide4</button>
+                <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div>
+                <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div>
+                <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+            </div>
+        </ul>
+    </div>
+
+
+    <!-- 先載入 -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/ab96302682.js" crossorigin="anonymous"></script>
+
+    <!-- JS start -->
+    <script>
+        const content = document.getElementById('content1');
+        content.style.color = "red";
+
+        $(function () {
+            jQuery("#content2").css('color', 'blue');
+        });
+
+        // 按鈕按下後執行JQuery
+        // content3
+        jQuery(document).ready(function () {
+            jQuery("#content3").click(function () {
+                jQuery(this).hide();
+            });
+        });
+
+        // content4 - class
+        $(document).ready(function () {
+            $(".button_show").click(function () {
+                $("#content4").show();
+            });
+            $(".button_hide").click(function () {
+                $("#content4").hide()
+            });
+        });
+
+        // content5 - id
+        $(document).ready(function () {
+            $("#show2").click(function () {
+                $("#content5").show()
+            });
+            $("#hide2").click(function () {
+                $("#content5").hide();
+            });
+        });
+
+        // content6 - id toggle
+        $(document).ready(function () {
+            $("#all1").click(function () {
+                $("p").toggle();
+            });
+        });
+
+        // content7 - 
+        $(document).ready(function () {
+
+            $("#show3").click(function () {
+                $("#content7").show(1000)
+            });
+            $("#hide3").click(function () {
+                $("#content7").hide(1000);
+            });
+        });
+
+         // content7 - fadeIn,fadeOut
+        $(document).ready(function(){
+            $("#show4").click(function(){
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(2000);
+            });
+            $("#hide4").click(function(){
+                $("#div1").fadeOut(2000);
+                $("#div2").fadeOut("slow");
+                $("#div3").fadeOut();
+            })
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>練習</h2>
+        <p id="mandarin" id="p1">中</p>
+        <p id="english" id="p1">英</mandarin" clp>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col" id="english">First</th>
+                    <th scope="col" id="english">Last</th>
+                    <th scope="col" id="english">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr class="tr2">
+                    <td scope="row">2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <td scope="row">3</td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr class="tr4">
+                    <td scope="row">4</td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- button -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <button id="button_red">紅</button>
+                <button id="button_blue">藍</button>
+                <button type="reset" id="reset1">重置</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 先載入 -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/ab96302682.js" crossorigin="anonymous"></script>
+
+    <!-- JS start -->
+    <script>
+        jQuery(document).ready(function () {
+            function removeAllClass(){
+                $("#mandarin , #english").show();
+                $("button").removeClass("btn-danger btn-primary");
+                $("tr").removeClass("table-danger table-primary");
+            };
+
+            // 清除動作
+            $("button").click(function(){
+                removeAllClass();
+            });
+        
+            // 紅色按鈕
+            $("#button_red").click(function(){
+                $("#english").hide();
+                $("#button_red").addClass("btn-danger");
+                $("tr:nth-child(even)").addClass("table-danger");
+                $("#mandarin").css('color', 'red');
+            });
+
+            // 藍色按鈕
+            $("#button_blue").click(function(){
+                $("#mandarin").hide();
+                $("#button_blue").addClass("btn-primary");
+                $('tr:not(":has(th)"):even').addClass("table-primary");
+                // $("tr:nth-child(odd)").addClass("table-primary");
+                $("#english").css('color', 'blue');
+            });
+
+            // 重置按鈕
+            $("#reset1").click(function(){
+                $("#mandarin").show();
+                $("#english").show();
+                $("#button_red").removeClass("btn-danger");
+                $("#button_blue").removeClass("btn-primary");
+                $("#mandarin,#english").css('color', 'black');
+            })
+
+
+        });
+    </script>
+</body>
+
+</html>

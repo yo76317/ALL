@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="w-100 h-20 d-block">
+            div Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore culpa, quam, provident quidem eveniet
+            aliquam sapiente fuga impedit est nostrum porro incidunt temporibus maxime quisquam! Dicta officia pariatur
+            suscipit consequuntur nulla, maxime aliquam at? Autem quo harum est dolorum quod animi natus tempora quia,
+            corrupti dolor magni adipisci porro totam.
+            <div class="w-100 h-20">
+                div Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui autem quos possimus illo consequuntur
+                facilis culpa perspiciatis, ab laudantium explicabo!
+                <span>span Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere eum optio dolores culpa
+                    consequatur nemo ipsam laborum illo sapiente accusamus!</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!--  btn-success -->
+                <button id="changeBtn" type="button" class="btn btn-lg btn-danger btn-block">change</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 先載入 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+    <!-- 先載入 END-->
+
+    <script>
+
+        $("span").parent().parent().css({ "color": "blue", "border": "2px solid blue" });
+        $("span").parent().css({ "color": "green", "border": "2px solid green" });
+        $("span").css({ "color": "red", "border": "2px solid red" });
+        $(document).ready(function () {
+            $('button').click(function () {
+                $('h2').text("hello :))");
+
+
+            //     $('li').last().prev().prev().addClass('list-group-item-info');
+            //     $('li').last().prev().prev().addClass('list-group-item-info');
+
+            //     $('li').first().next().next().addClass('list-group-item-info');
+            //     $('li').first().addClass('list-group-item-info');
+            //     $('li').last().addClass('list-group-item-info');
+            //     $('#myUl').find('li').addClass('list-group-item-info');
+
+                // index start at 0 
+            //     $('#myUl li:odd').addClass('list-group-item-info');
+            //     $('#myUl li:even').addClass('list-group-item-info');
+            //     $('#myUl li:first').addClass('list-group-item-info');
+            //     $('#myUl li:last').addClass('list-group-item-success');
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>

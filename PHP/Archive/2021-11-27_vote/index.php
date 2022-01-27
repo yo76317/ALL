@@ -17,7 +17,7 @@
       
 </style>
 <body>
-
+width
   <!-- 輪撥區 -->
   <div class="jumbotron p-0 mb-0" style="overflow:hidden;height:250px">  <!-- p = padding -->
     <a href="index.php">  <!-- 整格輪撥都是回首頁 -->
@@ -38,7 +38,7 @@
                     echo "<div class='carousel-item'>";
                   }
                   //帶入圖片的檔名及資訊
-                  echo "  <img class='d-block w-100' src='image/{$image['name']}' title='{$image['intro']}'>";
+                  echo " <img class='d-block w-100' src='image/{$image['name']}' title='{$image['intro']}'>";
                   echo "</div>";
                   }
               ?>

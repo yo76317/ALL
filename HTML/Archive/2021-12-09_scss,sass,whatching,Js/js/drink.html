@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            margin: 60px auto;
+        }
+
+        .img1 {
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>飲料計算</h2>
+        <p>條件:<br>
+            1.<br>
+            2.<br>
+            3.<br>
+        </p>
+        <form action="" id="myForm">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">品名</th>
+                        <th scope="col">價格</th>
+                        <th scope="col">數量</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">選項1</th>
+                        <td>咖啡</td>
+                        <td>10</td>
+                        <td>
+                            <input type="text" class="form-control" id="coffee" placeholder="杯數" name="coffee">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">選項2</th>
+                        <td>花茶</td>
+                        <td>50</td>
+                        <td>
+                            <input type="text" class="form-control" id="scentedTea" placeholder="杯數" name="scentedTea">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">選項3</th>
+                        <td>珍奶</td>
+                        <td>100</td>
+                        <td>
+                            <input type="text" class="form-control" id="PreciousMilk" placeholder="杯數" name="PreciousMilk">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <button type="submit1" class="btn btn-primary col">價格計算</button>
+                    </div>
+                    <div class="col">
+                        <!-- 這層div 可拔掉一層 -->
+                        <div class="alert alert-light" role="alert" id="result1">
+                            <div id="result2">價格顯示區</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <hr>
+
+        <!-- card1 -->
+        <div class="container">
+            <div class="row">
+
+                <div class="col-4">
+                    <div class="card bg-light mb-3" style="max-width: 18rem;">
+                        <div class="card-header">咖啡</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Light card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="card bg-light mb-3" style="max-width: 18rem;">
+                        <div class="card-header">花茶</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Light card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="card bg-light mb-3" style="max-width: 18rem;">
+                        <div class="card-header">珍奶</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Light card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div> <!-- card1 end -->
+
+        <div class="container-fluid">
+            <h2 class="text-center">購買飲料</h2>
+            <form action="" id="myForm2">
+                    <div class="row card-group">
+                        <div class="card">
+                            <img src="../img/coffee1.jpg" class="card-img-top img1" alt="coffee">
+                            <div class="card-body">
+                                <h5 class="card-title">咖啡</h5>
+                                <input type="text" class="form-control" id="coffee2" placeholder="杯數" name="coffee">
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="../img/scentedTea3.jpg" class="card-img-top img1" alt="scentedTea">
+                            <div class="card-body">
+                                <h5 class="card-title">花茶</h5>
+                                <input type="text" class="form-control" id="scentedTea2" placeholder="杯數" name="scentedTea">
+
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="../img/PreciousMilk1.jpg" class="card-img-top img1" alt="PreciousMilk">
+                            <div class="card-body">
+                                <h5 class="card-title">珍奶</h5>
+                                <input type="text" class="form-control" id="PreciousMilk2" placeholder="杯數" name="PreciousMilk">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <button type="submit1" class="btn btn-primary col">價格計算</button>
+                            </div>
+                            <div class="col">
+                                <!-- 這層div 可拔掉一層 -->
+                                <div class="alert alert-light" role="alert" id="">
+                                    <div id="">價格顯示區</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div> <!-- body end -->
+    <script src="./drink.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

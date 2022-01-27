@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body{margin:30px;}
+        button{margin-bottom:20px;}
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <dic class="col-2">
+                <p id=click1>
+                    單擊一下，產生console.log : p click
+                </p>
+                <p id=dbclick>
+                    單擊兩下，產生console.log : p dbclick
+                </p>
+                <button>移除 click 事件</button>
+               <hr>
+                <p>對焦,點擊input觸發<input id=focusInput></p>
+               
+                <p id=oneP>
+                    一次性,只能點擊一次
+                </p>
+                <p id=mouseenterP>
+                    滑鼠移入,移入觸發
+                </p>
+                <p id=mouseenterOutP>
+                    滑鼠移出,移出觸發
+                </p>
+                <p id=threeMerge>
+                    三合一,移入gray,移出blue,點擊yellow
+                </p>
+                <p id=hoverEvent>
+                    移入移出換背景色
+                </p>
+
+            </dic>
+        </div>
+    </div>
+
+<!-- 先載入 -->
+<script src="https://kit.fontawesome.com/ab96302682.js" crossorigin="anonymous"></script>   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- 先載入 END-->
+
+<script>
+    $(document).ready(function(){
+        // 單擊
+        $('#click1').on('click',function(){
+        console.log('p click');
+        });
+        
+        // 雙擊
+        $('#dbclick').on('dblclick',function(){
+            console.log('p dbclick');
+        });            
+        
+        // 移除
+        $("button").click(function(){
+        $('p').off('click');
+        });
+
+        // 對焦
+        $('#focusInput').on('focus',function(){
+            console.log('focus');
+        });
+        
+        // 一次性
+        $('#oneP').one('click',function(){
+            console.log('one click');
+        });
+        // 滑鼠移入
+        $('#mouseenterP').one('mouseenter',function(){
+            console.log('mouseenterP');
+        });
+
+        // 滑鼠移出
+        $('#mouseenterOutP').one('mouseout',function(){
+            console.log('mouseenterOutP');
+        });
+
+        $("#threeMerge").on({
+            // 移入
+            mouseenter:function(){
+                $(this).css("background-color","lightgray");
+                console.log('mouseenter');
+            },
+            // 離開
+            mouseout:function(){
+                $(this).css("background-color","lightblue");
+                console.log('mouseout');
+            },
+            // 點擊
+            mouseup:function(){
+                $(this).css("background-color","yellow");
+                console.log('mouseup');
+            }
+        });
+
+            // 
+        $('#hoverEvent').hover(function(){
+            $(this).css("background-color","lightblue");
+            console.log('hoverEnter');
+            },
+            function(){
+            $(this).css("background-color","lightgray");
+            console.log('hoverOut');  
+            });
+
+    });
+
+</script>
+
+
+
+</body>
+</html>

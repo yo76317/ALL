@@ -22,6 +22,16 @@ JQuery
 1.bootstrap 4.5 : https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
 2.cdnjs : bootstrap5.hexschool.com/docs/5.1/getting-started/introduction/
 3.官網 : https://jquery.com/
+4.JQuery 3.6存在根目錄
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+Font Awesome
+官網 : https://fontawesome.com/kits/ab96302682/use
+套件路徑 : <script src="https://kit.fontawesome.com/ab96302682.js" crossorigin="anonymous"></script>
+
+
 
 
 排版,文字

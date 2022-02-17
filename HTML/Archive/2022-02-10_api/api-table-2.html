@@ -8,28 +8,36 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
+    <!-- Global site tag (gtag.js) - Google Analytics 作品集流量 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H36CTL35YE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-H36CTL35YE');
+    </script>
 </head>
 
 <body>
     <div class="container mt-5">
         <div class="row">
             <div class="col-12">
-                <h3 class="text-center">datatable天氣資料</h3>
+                <h3 class="text-center">datatable 天氣資料</h3>
             </div>
         </div>
     </div>
 
     <div class="container mt-5">
-        <table id="table_id" class="table table-hover">
+        <table id="table_id" class="table table-hover ">
             <thead>
                 <tr>
                     <th>id</th>
                     <th>縣市</th>
-                    <th>早上</th>
-                    <th>晚上</th>
-                    <th>明天</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
                     <th>天氣狀況</th>
                 </tr>
             </thead>
@@ -61,6 +69,7 @@
 
     <!-- 先載入 END-->
     <script src="./js/jsonData.js"></script>
+
     <script>
 
         $(document).ready(function () {
@@ -73,19 +82,41 @@
                 success: function (result) {
                     data = result.cwbopendata.dataset.location;
                     console.log('data', data);
-                    
+
                     const hourArr = [];
                     hourArr[0] = "凌晨";
-                    hourArr[6] = "";
-                    hourArr[12] = "";
-                    hourArr[18] = "";
-                    console.log('hourArr',hourArr);
-                    
+                    hourArr[6] = "白天";
+                    hourArr[12] = "下午";
+                    hourArr[18] = "晚上";
+                    console.log('hourArr', hourArr);
+
+                    const time0 = new Date(data[0].weatherElement[0].time[0].startTime);
+                    const time1 = new Date(data[0].weatherElement[0].time[1].startTime);
+                    const time2 = new Date(data[0].weatherElement[0].time[2].startTime);
+                    timeText0 = `${time0.getFullYear()} / ${time0.getMonth() + 1} / ${time0.getDate()} ${hourArr[time0.getHours()]}`;
+                    timeText1 = `${time1.getFullYear()} / ${time1.getMonth() + 1} / ${time1.getDate()} ${hourArr[time1.getHours()]}`;
+                    timeText2 = `${time2.getFullYear()} / ${time2.getMonth() + 1} / ${time2.getDate()} ${hourArr[time2.getHours()]}`;
+                    // console.log('time0', time0);
+
+                    console.log('timeText0', timeText0);
+                    console.log('timeText1', timeText1);
+                    console.log('timeText2', timeText2);
+
+                    $('tr>th').eq(2).text(timeText0);
+                    $('tr>th').eq(3).text(timeText1);
+                    $('tr>th').eq(4).text(timeText2);
+
+                    const iconText0 = (time0.getHours() == 6 || time0.getHours() == 12) ? 'day' : 'night';
+                    const iconText1 = (time1.getHours() == 6 || time1.getHours() == 12) ? 'day' : 'night';
+                    const iconText2 = (time2.getHours() == 6 || time2.getHours() == 12) ? 'day' : 'night';
+
+                    console.log('iconText0', iconText0);
+
                     // 0台北 3台中 15屏東
-                    for( let i = 0 ; i < data.length; i++){
-                    $('tbody').append(`
+                    for (let i = 0; i < data.length; i++) {
+                        $('tbody').append(`
                 <tr>
-                    <td>${i+1}</td>
+                    <td>${i + 1}</td>
                     <td>${data[i].locationName}</td>
                     <td>${data[i].weatherElement[0].time[0].parameter.parameterName} 
                         ${data[i].weatherElement[2].time[0].parameter.parameterName} - 
@@ -102,9 +133,9 @@
 
                         `);
                     }
-                    
+
                     $('#table_id').DataTable();
-                    
+
                 }
             });
         });
